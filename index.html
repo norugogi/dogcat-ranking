@@ -68,13 +68,14 @@ fetch("./dogcat_ranking.json")
       if (g.ranking_change > 0) change = `<span class="up">▲${g.ranking_change}</span>`;
       if (g.ranking_change < 0) change = `<span class="down">▼${Math.abs(g.ranking_change)}</span>`;
 
+      `;
       tr.innerHTML = `
         <td>${g.ranking}</td>
         <td>${change}</td>
+        <td>${g.guild_name}</td>
         <td>${g.gc_name}</td>
         <td>${g.gc_level}</td>
-        <td>${g.class}</td>
-        <td>${g.world_id}</td>
+        <td>${jobName(g.class)}</td>
       `;
       tbody.appendChild(tr);
     });
