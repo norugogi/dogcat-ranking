@@ -47,6 +47,7 @@
       <th>결사</th>
       <th>캐릭터</th>
       <th>레벨</th>
+      <th>토벌</th>
       <th>직업</th>
     </tr>
   </thead>
@@ -87,6 +88,7 @@ fetch("./dogcat_ranking.json")
         <td>${g.guild_name}</td>
         <td>${g.gc_name}</td>
         <td>${g.gc_level}</td>
+        <td>${g.string_map.grade}</td>
         <td>${jobName(g.class)}</td>
       `;
       tbody.appendChild(tr);
