@@ -54,19 +54,6 @@
 </table>
 
 <script>
-const JOB_MAP = {
-  AbyssRevenant: "심연수확자",
-  IncenseArcher: "향사수",
-  MirageBlade: "환영검사",
-  RuneScribe: "주문각인사",
-  SolarSentinel: "태양감시자",
-  Enforcer: "집행관",
-  // 필요할 때마다 추가
-};
-
-function jobName(code) {
-  return JOB_MAP[code] || code;
-}
 
 fetch("./dogcat_ranking.json")
   .then(res => res.json())
