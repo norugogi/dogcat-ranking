@@ -44,16 +44,29 @@
     <tr>
       <th>순위</th>
       <th>변동</th>
+      <th>결사</th>
       <th>캐릭터</th>
       <th>레벨</th>
       <th>직업</th>
-      <th>서버</th>
     </tr>
   </thead>
   <tbody id="ranking"></tbody>
 </table>
 
 <script>
+const JOB_MAP = {
+  AbyssRevenant: "심연수확자",
+  Enforcer: "집행관",
+  SolarSentinel: "태양감시자",
+  RuneScribe: "주문각인사",
+  MirageBlade: "환영검사",
+  IncenseArcher: "향사수",
+};
+
+function jobName(code) {
+  return JOB_MAP[code] || code;
+}
+
 fetch("./dogcat_ranking.json")
   .then(res => res.json())
   .then(list => {
