@@ -54,9 +54,8 @@
 </table>
 
 <script>
-<script>
 const JOB_MAP = {
-  AbyssRevenant: "심연추방자",
+  AbyssRevenant: "심연수확자",
   IncenseArcher: "향사수",
   MirageBlade: "환영검사",
   RuneScribe: "주문각인사",
@@ -68,6 +67,7 @@ const JOB_MAP = {
 function jobName(code) {
   return JOB_MAP[code] || code;
 }
+
 fetch("./dogcat_ranking.json")
   .then(res => res.json())
   .then(list => {
@@ -77,19 +77,19 @@ fetch("./dogcat_ranking.json")
 
     list.forEach(g => {
       const tr = document.createElement("tr");
+      const job = g.class;
 
       let change = "-";
-      if (g.ranking_change > 0) change = `<span class="up">▲${g.ranking_change}</span>`;
-      if (g.ranking_change < 0) change = `<span class="down">▼${Math.abs(g.ranking_change)}</span>`;
+      if (g.ranking_change > 0) change = `▲${g.ranking_change}`;
+      if (g.ranking_change < 0) change = `▼${Math.abs(g.ranking_change)}`;
 
-      `;
       tr.innerHTML = `
         <td>${g.ranking}</td>
         <td>${change}</td>
         <td>${g.guild_name}</td>
         <td>${g.gc_name}</td>
         <td>${g.gc_level}</td>
-        <td>${jobName(g.class)}</td>
+        <td>${jobName(job)}</td>
       `;
       tbody.appendChild(tr);
     });
