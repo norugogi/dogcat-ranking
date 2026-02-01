@@ -171,7 +171,7 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "아드나",
+    "gc_name": "Dia",
     "gc_level": 89,
     "ranking": 14,
     "ranking_change": 0,
@@ -179,12 +179,12 @@
     "string_map": {
       "grade": "24"
     },
-    "class": "SolarSentinel"
+    "class": "RuneScribe"
   },
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "Dia",
+    "gc_name": "아드나",
     "gc_level": 89,
     "ranking": 15,
     "ranking_change": 0,
@@ -192,7 +192,7 @@
     "string_map": {
       "grade": "24"
     },
-    "class": "RuneScribe"
+    "class": "SolarSentinel"
   },
   {
     "world_group_id": "LIVE_W03",
@@ -392,11 +392,11 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "후리기도사",
+    "gc_name": "랄랄",
     "gc_level": 87,
     "ranking": 33,
     "ranking_change": 0,
-    "guild_name": "CAT",
+    "guild_name": "DOG",
     "string_map": {
       "grade": "23"
     },
@@ -405,11 +405,11 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "랄랄",
+    "gc_name": "후리기도사",
     "gc_level": 87,
     "ranking": 34,
     "ranking_change": 0,
-    "guild_name": "DOG",
+    "guild_name": "CAT",
     "string_map": {
       "grade": "23"
     },
@@ -431,7 +431,7 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "유성낙하",
+    "gc_name": "강모",
     "gc_level": 87,
     "ranking": 36,
     "ranking_change": 0,
@@ -444,7 +444,7 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "강모",
+    "gc_name": "유성낙하",
     "gc_level": 87,
     "ranking": 37,
     "ranking_change": 0,
@@ -496,7 +496,7 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "커먼",
+    "gc_name": "스윗장궁",
     "gc_level": 86,
     "ranking": 41,
     "ranking_change": 0,
@@ -509,7 +509,7 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "스윗장궁",
+    "gc_name": "커먼",
     "gc_level": 86,
     "ranking": 42,
     "ranking_change": 0,
@@ -587,28 +587,28 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "기켄꼬",
-    "gc_level": 86,
-    "ranking": 49,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "23"
-    },
-    "class": "RuneScribe"
-  },
-  {
-    "world_group_id": "LIVE_W03",
-    "world_id": "LIVE_W03_R5",
     "gc_name": "샬롯",
     "gc_level": 86,
-    "ranking": 50,
+    "ranking": 49,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "21"
     },
     "class": "AbyssRevenant"
+  },
+  {
+    "world_group_id": "LIVE_W03",
+    "world_id": "LIVE_W03_R5",
+    "gc_name": "기켄꼬",
+    "gc_level": 86,
+    "ranking": 50,
+    "ranking_change": 0,
+    "guild_name": "DOG",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "RuneScribe"
   },
   {
     "world_group_id": "LIVE_W03",
@@ -717,28 +717,28 @@
   {
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
-    "gc_name": "갓힐꼬",
-    "gc_level": 85,
-    "ranking": 60,
-    "ranking_change": 0,
-    "guild_name": "CAT",
-    "string_map": {
-      "grade": "20"
-    },
-    "class": "RuneScribe"
-  },
-  {
-    "world_group_id": "LIVE_W03",
-    "world_id": "LIVE_W03_R5",
     "gc_name": "더슈란",
     "gc_level": 85,
-    "ranking": 61,
+    "ranking": 60,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
       "grade": "21"
     },
     "class": "MirageBlade"
+  },
+  {
+    "world_group_id": "LIVE_W03",
+    "world_id": "LIVE_W03_R5",
+    "gc_name": "갓힐꼬",
+    "gc_level": 85,
+    "ranking": 61,
+    "ranking_change": 0,
+    "guild_name": "CAT",
+    "string_map": {
+      "grade": "20"
+    },
+    "class": "RuneScribe"
   },
   {
     "world_group_id": "LIVE_W03",
@@ -862,7 +862,7 @@
     "world_id": "LIVE_W03_R5",
     "gc_name": "율하이",
     "gc_level": 84,
-    "ranking": 76,
+    "ranking": 77,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -887,7 +887,7 @@
     "world_group_id": "LIVE_W03",
     "world_id": "LIVE_W03_R5",
     "gc_name": "물약물약",
-    "gc_level": 83,
+    "gc_level": 84,
     "ranking": 79,
     "ranking_change": 0,
     "guild_name": "CAT",
