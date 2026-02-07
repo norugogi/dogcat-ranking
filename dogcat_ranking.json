@@ -96,7 +96,7 @@
     "gc_name": "국바비",
     "gc_level": 90,
     "ranking": 13,
-    "ranking_change": -2,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -119,9 +119,22 @@
   {
     "world_group_id": "LIVE_W12",
     "world_id": "LIVE_W12_R1",
-    "gc_name": "스윗시로",
+    "gc_name": "도그는핫도그",
     "gc_level": 90,
     "ranking": 16,
+    "ranking_change": 0,
+    "guild_name": "DOG",
+    "string_map": {
+      "grade": "24"
+    },
+    "class": "SolarSentinel"
+  },
+  {
+    "world_group_id": "LIVE_W12",
+    "world_id": "LIVE_W12_R1",
+    "gc_name": "스윗시로",
+    "gc_level": 90,
+    "ranking": 17,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -134,7 +147,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "쉼터터",
     "gc_level": 90,
-    "ranking": 18,
+    "ranking": 19,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -147,7 +160,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "Ruby",
     "gc_level": 90,
-    "ranking": 19,
+    "ranking": 20,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -160,7 +173,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "작두",
     "gc_level": 90,
-    "ranking": 21,
+    "ranking": 22,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -173,7 +186,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "다약꼬",
     "gc_level": 89,
-    "ranking": 25,
+    "ranking": 26,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -186,7 +199,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "아드나",
     "gc_level": 89,
-    "ranking": 26,
+    "ranking": 27,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -199,8 +212,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "마루꿍",
     "gc_level": 89,
-    "ranking": 28,
-    "ranking_change": -1,
+    "ranking": 29,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -212,7 +225,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "로빈후두",
     "gc_level": 89,
-    "ranking": 34,
+    "ranking": 35,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -225,8 +238,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "소운",
     "gc_level": 89,
-    "ranking": 39,
-    "ranking_change": -1,
+    "ranking": 40,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -238,7 +251,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "마위",
     "gc_level": 89,
-    "ranking": 40,
+    "ranking": 42,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -251,8 +264,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "베찌",
     "gc_level": 88,
-    "ranking": 43,
-    "ranking_change": -1,
+    "ranking": 44,
+    "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
       "grade": "24"
@@ -264,7 +277,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "망내",
     "gc_level": 88,
-    "ranking": 47,
+    "ranking": 48,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -277,8 +290,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "훌꼬",
     "gc_level": 88,
-    "ranking": 48,
-    "ranking_change": 4,
+    "ranking": 49,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -290,8 +303,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "김쓰",
     "gc_level": 88,
-    "ranking": 49,
-    "ranking_change": 4,
+    "ranking": 50,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -303,8 +316,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "나미꼬",
     "gc_level": 88,
-    "ranking": 51,
-    "ranking_change": -2,
+    "ranking": 52,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -316,7 +329,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "갈색",
     "gc_level": 88,
-    "ranking": 54,
+    "ranking": 55,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -329,8 +342,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "치악산",
     "gc_level": 88,
-    "ranking": 55,
-    "ranking_change": 3,
+    "ranking": 56,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -342,8 +355,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "프로도",
     "gc_level": 88,
-    "ranking": 56,
-    "ranking_change": -1,
+    "ranking": 57,
+    "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
       "grade": "23"
@@ -355,8 +368,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "학연",
     "gc_level": 88,
-    "ranking": 57,
-    "ranking_change": -1,
+    "ranking": 58,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -368,7 +381,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "더춘식",
     "gc_level": 88,
-    "ranking": 59,
+    "ranking": 60,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -381,7 +394,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "보축",
     "gc_level": 88,
-    "ranking": 61,
+    "ranking": 62,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -394,8 +407,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "붉은사슴",
     "gc_level": 88,
-    "ranking": 62,
-    "ranking_change": 2,
+    "ranking": 63,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -407,8 +420,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "이단옆차기",
     "gc_level": 88,
-    "ranking": 66,
-    "ranking_change": -1,
+    "ranking": 67,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -420,7 +433,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "랄랄",
     "gc_level": 87,
-    "ranking": 67,
+    "ranking": 68,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -433,8 +446,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "강모",
     "gc_level": 87,
-    "ranking": 74,
-    "ranking_change": -3,
+    "ranking": 75,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -446,8 +459,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "유성낙하",
     "gc_level": 87,
-    "ranking": 75,
-    "ranking_change": -2,
+    "ranking": 76,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -459,8 +472,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "춥다뿡",
     "gc_level": 87,
-    "ranking": 76,
-    "ranking_change": -2,
+    "ranking": 77,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -472,8 +485,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "커먼",
     "gc_level": 86,
-    "ranking": 89,
-    "ranking_change": -1,
+    "ranking": 90,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -485,8 +498,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "스윗장궁",
     "gc_level": 86,
-    "ranking": 90,
-    "ranking_change": -1,
+    "ranking": 91,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -498,8 +511,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "로저",
     "gc_level": 86,
-    "ranking": 91,
-    "ranking_change": -1,
+    "ranking": 92,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -511,8 +524,8 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "일보",
     "gc_level": 86,
-    "ranking": 92,
-    "ranking_change": 1,
+    "ranking": 93,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
@@ -524,7 +537,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "히이잉",
     "gc_level": 86,
-    "ranking": 94,
+    "ranking": 95,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -537,7 +550,7 @@
     "world_id": "LIVE_W12_R1",
     "gc_name": "더가오",
     "gc_level": 86,
-    "ranking": 95,
+    "ranking": 96,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
