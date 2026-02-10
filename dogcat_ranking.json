@@ -83,7 +83,7 @@
     "gc_name": "스윗애월",
     "gc_level": 90,
     "ranking": 12,
-    "ranking_change": 0,
+    "ranking_change": 1,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -96,7 +96,7 @@
     "gc_name": "키키",
     "gc_level": 90,
     "ranking": 13,
-    "ranking_change": 0,
+    "ranking_change": -1,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -193,19 +193,6 @@
       "grade": "24"
     },
     "class": "RuneScribe"
-  },
-  {
-    "world_group_id": "LIVE_W09",
-    "world_id": "LIVE_W09_R3",
-    "gc_name": "누룽지",
-    "gc_level": 89,
-    "ranking": 29,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "24"
-    },
-    "class": "SolarSentinel"
   },
   {
     "world_group_id": "LIVE_W09",
@@ -342,7 +329,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "훌꼬",
     "gc_level": 88,
-    "ranking": 50,
+    "ranking": 51,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -368,7 +355,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "브라운",
     "gc_level": 88,
-    "ranking": 53,
+    "ranking": 54,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -446,7 +433,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "설악산노루",
     "gc_level": 88,
-    "ranking": 62,
+    "ranking": 63,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -459,7 +446,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "바벨",
     "gc_level": 88,
-    "ranking": 66,
+    "ranking": 68,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -472,9 +459,22 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "랄랄랄",
     "gc_level": 87,
-    "ranking": 72,
+    "ranking": 73,
     "ranking_change": 0,
     "guild_name": "DOG",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "RuneScribe"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "닌텐도",
+    "gc_level": 87,
+    "ranking": 75,
+    "ranking_change": 0,
+    "guild_name": "CAT",
     "string_map": {
       "grade": "23"
     },
@@ -484,19 +484,6 @@
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
     "gc_name": "강모",
-    "gc_level": 87,
-    "ranking": 75,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "23"
-    },
-    "class": "RuneScribe"
-  },
-  {
-    "world_group_id": "LIVE_W09",
-    "world_id": "LIVE_W09_R3",
-    "gc_name": "유성낙하",
     "gc_level": 87,
     "ranking": 76,
     "ranking_change": 0,
@@ -509,9 +496,35 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "키지",
+    "gc_name": "유성낙하",
     "gc_level": 87,
     "ranking": 77,
+    "ranking_change": 0,
+    "guild_name": "DOG",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "RuneScribe"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "봄이다뿡",
+    "gc_level": 87,
+    "ranking": 78,
+    "ranking_change": 0,
+    "guild_name": "DOG",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "MirageBlade"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "키지",
+    "gc_level": 87,
+    "ranking": 80,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -522,9 +535,22 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "녹색영약",
+    "gc_name": "준태",
     "gc_level": 87,
     "ranking": 86,
+    "ranking_change": 0,
+    "guild_name": "CAT",
+    "string_map": {
+      "grade": "22"
+    },
+    "class": "SolarSentinel"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "녹색영약",
+    "gc_level": 87,
+    "ranking": 90,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -537,7 +563,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "로저",
     "gc_level": 87,
-    "ranking": 88,
+    "ranking": 92,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -550,7 +576,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "커먼",
     "gc_level": 87,
-    "ranking": 89,
+    "ranking": 93,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -563,7 +589,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "스윗장궁",
     "gc_level": 87,
-    "ranking": 91,
+    "ranking": 95,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -576,7 +602,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "스윗일보",
     "gc_level": 86,
-    "ranking": 93,
+    "ranking": 97,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -589,7 +615,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "이이잉",
     "gc_level": 86,
-    "ranking": 95,
+    "ranking": 99,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -602,7 +628,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "가오",
     "gc_level": 86,
-    "ranking": 96,
+    "ranking": 100,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
