@@ -83,7 +83,7 @@
     "gc_name": "스윗애월",
     "gc_level": 90,
     "ranking": 12,
-    "ranking_change": 1,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -96,7 +96,7 @@
     "gc_name": "키키",
     "gc_level": 90,
     "ranking": 13,
-    "ranking_change": -1,
+    "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
@@ -193,6 +193,19 @@
       "grade": "24"
     },
     "class": "RuneScribe"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "누룽지",
+    "gc_level": 89,
+    "ranking": 29,
+    "ranking_change": 0,
+    "guild_name": "DOG",
+    "string_map": {
+      "grade": "24"
+    },
+    "class": "SolarSentinel"
   },
   {
     "world_group_id": "LIVE_W09",
@@ -537,8 +550,8 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "준태",
     "gc_level": 87,
-    "ranking": 86,
-    "ranking_change": 0,
+    "ranking": 85,
+    "ranking_change": 1,
     "guild_name": "CAT",
     "string_map": {
       "grade": "22"
