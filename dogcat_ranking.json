@@ -16,7 +16,7 @@
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
     "gc_name": "스윗롬멜",
-    "gc_level": 91,
+    "gc_level": 92,
     "ranking": 2,
     "ranking_change": 0,
     "guild_name": "DOG",
@@ -80,19 +80,6 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "스윗애월",
-    "gc_level": 90,
-    "ranking": 12,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "24"
-    },
-    "class": "Enforcer"
-  },
-  {
-    "world_group_id": "LIVE_W09",
-    "world_id": "LIVE_W09_R3",
     "gc_name": "키키",
     "gc_level": 90,
     "ranking": 13,
@@ -145,7 +132,7 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "쉼터",
+    "gc_name": "Ruby",
     "gc_level": 90,
     "ranking": 22,
     "ranking_change": 0,
@@ -153,12 +140,12 @@
     "string_map": {
       "grade": "24"
     },
-    "class": "SolarSentinel"
+    "class": "IncenseArcher"
   },
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "Ruby",
+    "gc_name": "쉼터",
     "gc_level": 90,
     "ranking": 23,
     "ranking_change": 0,
@@ -166,7 +153,7 @@
     "string_map": {
       "grade": "24"
     },
-    "class": "IncenseArcher"
+    "class": "SolarSentinel"
   },
   {
     "world_group_id": "LIVE_W09",
@@ -316,7 +303,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "김쓰",
     "gc_level": 88,
-    "ranking": 47,
+    "ranking": 48,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -329,7 +316,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "카린",
     "gc_level": 88,
-    "ranking": 48,
+    "ranking": 49,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -342,7 +329,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "스윗자미",
     "gc_level": 88,
-    "ranking": 49,
+    "ranking": 50,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -355,7 +342,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "훌꼬",
     "gc_level": 88,
-    "ranking": 50,
+    "ranking": 51,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -368,7 +355,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "브라운",
     "gc_level": 88,
-    "ranking": 52,
+    "ranking": 53,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -381,7 +368,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "로도",
     "gc_level": 88,
-    "ranking": 53,
+    "ranking": 54,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -392,15 +379,15 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "착취의저격자세",
+    "gc_name": "학연",
     "gc_level": 88,
     "ranking": 55,
     "ranking_change": 0,
-    "guild_name": "CAT",
+    "guild_name": "DOG",
     "string_map": {
-      "grade": "23"
+      "grade": "24"
     },
-    "class": "IncenseArcher"
+    "class": "SolarSentinel"
   },
   {
     "world_group_id": "LIVE_W09",
@@ -418,22 +405,9 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "학연",
+    "gc_name": "착취의저격자세",
     "gc_level": 88,
     "ranking": 57,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "24"
-    },
-    "class": "SolarSentinel"
-  },
-  {
-    "world_group_id": "LIVE_W09",
-    "world_id": "LIVE_W09_R3",
-    "gc_name": "야추",
-    "gc_level": 88,
-    "ranking": 59,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -446,13 +420,26 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "스윗춘식",
     "gc_level": 88,
-    "ranking": 60,
+    "ranking": 59,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "24"
     },
     "class": "MirageBlade"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "야추",
+    "gc_level": 88,
+    "ranking": 60,
+    "ranking_change": 0,
+    "guild_name": "CAT",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "IncenseArcher"
   },
   {
     "world_group_id": "LIVE_W09",
@@ -472,7 +459,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "설악산노루",
     "gc_level": 88,
-    "ranking": 64,
+    "ranking": 65,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -485,7 +472,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "바벨",
     "gc_level": 88,
-    "ranking": 68,
+    "ranking": 66,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -498,7 +485,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "랄랄랄",
     "gc_level": 88,
-    "ranking": 73,
+    "ranking": 71,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
@@ -574,10 +561,23 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
+    "gc_name": "녹색영약",
+    "gc_level": 87,
+    "ranking": 86,
+    "ranking_change": 4,
+    "guild_name": "CAT",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "IncenseArcher"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
     "gc_name": "준태",
     "gc_level": 87,
-    "ranking": 87,
-    "ranking_change": 0,
+    "ranking": 89,
+    "ranking_change": -1,
     "guild_name": "CAT",
     "string_map": {
       "grade": "22"
@@ -587,11 +587,11 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "녹색영약",
+    "gc_name": "커먼",
     "gc_level": 87,
-    "ranking": 89,
+    "ranking": 92,
     "ranking_change": 0,
-    "guild_name": "CAT",
+    "guild_name": "DOG",
     "string_map": {
       "grade": "23"
     },
@@ -602,7 +602,7 @@
     "world_id": "LIVE_W09_R3",
     "gc_name": "히잉",
     "gc_level": 87,
-    "ranking": 91,
+    "ranking": 93,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -613,35 +613,9 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "커먼",
-    "gc_level": 87,
-    "ranking": 93,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "23"
-    },
-    "class": "IncenseArcher"
-  },
-  {
-    "world_group_id": "LIVE_W09",
-    "world_id": "LIVE_W09_R3",
-    "gc_name": "스윗장궁",
-    "gc_level": 87,
-    "ranking": 94,
-    "ranking_change": 0,
-    "guild_name": "DOG",
-    "string_map": {
-      "grade": "23"
-    },
-    "class": "IncenseArcher"
-  },
-  {
-    "world_group_id": "LIVE_W09",
-    "world_id": "LIVE_W09_R3",
     "gc_name": "로저",
     "gc_level": 87,
-    "ranking": 95,
+    "ranking": 94,
     "ranking_change": 0,
     "guild_name": "CAT",
     "string_map": {
@@ -652,20 +626,33 @@
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
-    "gc_name": "스윗일보",
+    "gc_name": "스윗장궁",
     "gc_level": 87,
-    "ranking": 98,
+    "ranking": 95,
     "ranking_change": 0,
     "guild_name": "DOG",
     "string_map": {
       "grade": "23"
     },
-    "class": "RuneScribe"
+    "class": "IncenseArcher"
   },
   {
     "world_group_id": "LIVE_W09",
     "world_id": "LIVE_W09_R3",
     "gc_name": "가오",
+    "gc_level": 87,
+    "ranking": 99,
+    "ranking_change": 0,
+    "guild_name": "DOG",
+    "string_map": {
+      "grade": "23"
+    },
+    "class": "SolarSentinel"
+  },
+  {
+    "world_group_id": "LIVE_W09",
+    "world_id": "LIVE_W09_R3",
+    "gc_name": "스윗일보",
     "gc_level": 86,
     "ranking": 100,
     "ranking_change": 0,
@@ -673,6 +660,6 @@
     "string_map": {
       "grade": "23"
     },
-    "class": "SolarSentinel"
+    "class": "RuneScribe"
   }
 ]
