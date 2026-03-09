@@ -1,19 +1,31 @@
+let players = [];
+
 const classMap = {
+
 AbyssRevenant:"심연추방자",
 Enforcer:"집행관",
 SolarSentinel:"태양감시자",
 RuneScribe:"주문각인사",
 MirageBlade:"환영검사",
 IncenseArcher:"향사수"
+
 };
 
 fetch("all_servers_ranking.json")
 .then(res => res.json())
 .then(data => {
 
+players = data;
+
+showAll();
+
+});
+
+function render(list){
+
 let html = "";
 
-data.forEach(p => {
+list.forEach(p => {
 
 let guild = p.guild_name || "";
 let name = p.gc_name || "";
@@ -35,17 +47,32 @@ html += `
 
 document.getElementById("playerList").innerHTML = html;
 
-});
+}
 
+function showAll(){
 
-// 갱신시간 표시
-const now = new Date();
+render(players);
 
-const formatted =
-now.getFullYear() + "." +
-String(now.getMonth()+1).padStart(2,"0") + "." +
-String(now.getDate()).padStart(2,"0") + " " +
-String(now.getHours()).padStart(2,"0") + ":" +
-String(now.getMinutes()).padStart(2,"0");
+}
 
-document.getElementById("updateTime").innerText = formatted;
+function showDOG(){
+
+let list = players.filter(p => p.guild_name === "DOG");
+
+render(list);
+
+}
+
+function showCAT(){
+
+let list = players.filter(p => p.guild_name === "CAT");
+
+render(list);
+
+}
+
+function openStats(){
+
+window.open("stats.html","_blank");
+
+}
