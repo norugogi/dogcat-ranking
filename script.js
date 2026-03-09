@@ -73,7 +73,12 @@ render(list);
 
 function openStats(){
 
-window.open("stats.html","_blank");
+window.open(
+"stats.html",
+"statsPopup",
+"width=1000,height=750,top=120,left=250,resizable=yes,scrollbars=yes"
+);
 
 }
+
 
