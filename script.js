@@ -65,7 +65,7 @@ render(list);
 
 function showCAT(){
 
-let list = players.filter(p => p.guild_name === "CAT");
+let list = players.filter(p => p.guild_name === "CATT");
 
 render(list);
 
@@ -76,3 +76,4 @@ function openStats(){
 window.open("stats.html","_blank");
 
 }
+
