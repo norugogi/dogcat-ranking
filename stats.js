@@ -37,16 +37,57 @@ renderStats("classStats",classStats);
 
 function renderStats(id,data){
 
-let html = "<table style='margin:auto;'>";
+let total = 0;
 
-for(let key in data){
-
-html += `<tr><td>${key}</td><td>${data[key]}명</td></tr>`;
-
+for(let k in data){
+total += data[k];
 }
+
+let entries = Object.entries(data);
+
+entries.sort((a,b)=>b[1]-a[1]);
+
+let html = "<table>";
+
+html += `
+<tr>
+<th>구분</th>
+<th>인원</th>
+<th>비율</th>
+</tr>
+`;
+
+entries.forEach(e=>{
+
+let key = e[0];
+let count = e[1];
+let percent = ((count/total)*100).toFixed(1);
+
+html += `
+<tr>
+<td>${key}</td>
+<td>${count}</td>
+<td>${percent}%</td>
+</tr>
+`;
+
+});
 
 html += "</table>";
 
 document.getElementById(id).innerHTML = html;
 
 }
+
+// 갱신시간
+
+const now = new Date();
+
+const formatted =
+now.getFullYear() + "." +
+String(now.getMonth()+1).padStart(2,"0") + "." +
+String(now.getDate()).padStart(2,"0") + " " +
+String(now.getHours()).padStart(2,"0") + ":" +
+String(now.getMinutes()).padStart(2,"0");
+
+document.getElementById("updateTime").innerText = formatted;
