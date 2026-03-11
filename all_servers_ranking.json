@@ -105,18 +105,18 @@
     "guild_name": "DOG"
   },
   {
-    "gc_name": "준태",
-    "gc_level": 87,
-    "class": "SolarSentinel",
-    "grade": "23",
-    "guild_name": "CATT"
-  },
-  {
     "gc_name": "가오",
     "gc_level": 87,
     "class": "SolarSentinel",
     "grade": "24",
     "guild_name": "DOG"
+  },
+  {
+    "gc_name": "준태",
+    "gc_level": 87,
+    "class": "SolarSentinel",
+    "grade": "23",
+    "guild_name": "CATT"
   },
   {
     "gc_name": "윙티",
@@ -133,18 +133,18 @@
     "guild_name": "DOG"
   },
   {
-    "gc_name": "프로도",
-    "gc_level": 88,
-    "class": "MirageBlade",
-    "grade": "24",
-    "guild_name": "CATT"
-  },
-  {
     "gc_name": "더춘식",
     "gc_level": 88,
     "class": "MirageBlade",
     "grade": "24",
     "guild_name": "DOG"
+  },
+  {
+    "gc_name": "프로도",
+    "gc_level": 88,
+    "class": "MirageBlade",
+    "grade": "24",
+    "guild_name": "CATT"
   },
   {
     "gc_name": "덥뿡",
@@ -239,7 +239,7 @@
   },
   {
     "gc_name": "갈색",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "IncenseArcher",
     "grade": "24",
     "guild_name": "DOG"
@@ -260,6 +260,13 @@
   },
   {
     "gc_name": "세월의나그네",
+    "gc_level": 88,
+    "class": "IncenseArcher",
+    "grade": "23",
+    "guild_name": "CATT"
+  },
+  {
+    "gc_name": "야추",
     "gc_level": 88,
     "class": "IncenseArcher",
     "grade": "23",
@@ -375,7 +382,7 @@
     "gc_level": 88,
     "class": "RuneScribe",
     "grade": "23",
-    "guild_name": "CATT"
+    "guild_name": "DOG"
   },
   {
     "gc_name": "바벨",
@@ -470,16 +477,16 @@
   },
   {
     "gc_name": "시바화아타",
-    "gc_level": 85,
+    "gc_level": 86,
     "class": "RuneScribe",
     "grade": "21",
-    "guild_name": "DOG"
+    "guild_name": "CATT"
   },
   {
     "gc_name": "로카",
     "gc_level": 85,
     "class": "RuneScribe",
-    "grade": "21",
+    "grade": "22",
     "guild_name": "DOG"
   },
   {
