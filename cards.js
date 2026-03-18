@@ -1,20 +1,48 @@
 let allData = [];
+let visibleCount = 20;
 
+/* 메뉴 활성화 */
+function setActive(el){
+  document.querySelectorAll(".menu-item").forEach(m=>m.classList.remove("active"));
+  el.classList.add("active");
+}
+
+/* 테이블 보기 */
+function showTable(el){
+  setActive(el);
+  document.getElementById("tableSection").style.display = "block";
+  document.getElementById("cardSection").style.display = "none";
+}
+
+/* 카드 보기 */
+function showCards(el){
+  setActive(el);
+  document.getElementById("tableSection").style.display = "none";
+  document.getElementById("cardSection").style.display = "block";
+
+  if(allData.length === 0){
+    loadData();
+  }
+}
+
+/* 데이터 로드 */
 async function loadData(){
   const res = await fetch("all_servers_ranking.json");
   const data = await res.json();
 
-  allData = data;
+  allData = data.sort((a,b)=>b.gc_level-a.gc_level);
 
-  renderCards(data);
+  renderCards();
 }
 
-function renderCards(data){
+/* 카드 렌더 */
+function renderCards(){
   const container = document.getElementById("cardContainer");
   container.innerHTML = "";
 
-  data.forEach(player => {
+  const slice = allData.slice(0, visibleCount);
 
+  slice.forEach(player=>{
     const className = player.class;
 
     const grayImg = `assets_classes/${className}_gray.png`;
@@ -23,7 +51,6 @@ function renderCards(data){
     const card = document.createElement("div");
     card.className = "card";
 
-    // 🔥 검색용 데이터 저장
     card.setAttribute("data-name", player.gc_name);
 
     card.style.setProperty("--gray-img", `url('${grayImg}')`);
@@ -31,7 +58,6 @@ function renderCards(data){
 
     card.innerHTML = `
       <div class="card-inner">
-
         <div class="card-front">
           <div class="level">Lv.${player.gc_level}</div>
           <div class="grade">${player.grade}</div>
@@ -39,43 +65,39 @@ function renderCards(data){
         </div>
 
         <div class="card-back">
-          <div class="back-guild">${player.guild_name}</div>
-          <div class="back-power">전투력: -</div>
-          <div class="back-desc">특징: -</div>
+          <div>${player.guild_name}</div>
+          <div>전투력: -</div>
+          <div>특징: -</div>
         </div>
-
       </div>
     `;
 
-    card.onclick = () => flipCard(card);
+    card.onclick = ()=>card.classList.toggle("flipped");
 
     container.appendChild(card);
   });
 }
 
-/* 카드 뒤집기 */
-function flipCard(card){
-  card.classList.toggle("flipped");
+/* 더보기 */
+function loadMore(){
+  visibleCount += 20;
+  renderCards();
 }
 
-/* 🔍 검색 기능 */
+/* 검색 */
 function searchCard(){
   const input = document.getElementById("searchInput").value.trim();
-
   if(!input) return;
 
   const cards = document.querySelectorAll(".card");
 
   let found = false;
 
-  cards.forEach(card => {
+  cards.forEach(card=>{
     card.classList.remove("highlight");
 
-    const name = card.getAttribute("data-name");
-
-    if(name.includes(input)){
+    if(card.dataset.name.includes(input)){
       found = true;
-
       card.classList.add("highlight");
 
       card.scrollIntoView({
@@ -86,8 +108,6 @@ function searchCard(){
   });
 
   if(!found){
-    alert("해당 닉네임을 찾을 수 없습니다.");
+    alert("닉네임 없음");
   }
 }
-
-loadData();
