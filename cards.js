@@ -1,39 +1,47 @@
-let allData = [];
+let originalData = [];
+let filteredData = [];
 let currentIndex = 0;
 const pageSize = 20;
 
 async function loadData() {
   const res = await fetch("all_servers_ranking.json");
-  allData = await res.json();
-  renderCards();
+  originalData = await res.json();
+  filteredData = [...originalData];
+
+  renderCards(true);
 }
 
-function renderCards() {
+function renderCards(reset = false) {
   const container = document.getElementById("cardContainer");
 
-  for (let i = currentIndex; i < currentIndex + pageSize && i < allData.length; i++) {
-    const p = allData[i];
+  if (reset) {
+    container.innerHTML = "";
+    currentIndex = 0;
+  }
+
+  const end = Math.min(currentIndex + pageSize, filteredData.length);
+
+  for (let i = currentIndex; i < end; i++) {
+    const p = filteredData[i];
 
     const card = document.createElement("div");
     card.className = "card";
 
-    const imgPath = `assets_classes/${p.class}_gold.png`;
+    const img = `assets_classes/${p.class}_gold.png`;
 
     card.innerHTML = `
       <div class="card-inner">
 
         <div class="card-front">
-          <img src="${imgPath}" style="width:100%; height:100%; object-fit:cover;">
-          <div style="position:absolute; top:10px; left:10px; color:white; font-weight:bold;">
-            Lv.${p.gc_level} (${p.grade})
-          </div>
-          <div style="position:absolute; bottom:20px; width:100%; text-align:center; color:white; font-size:18px;">
-            ${p.gc_name}
-          </div>
+          <img src="${img}">
+          <div class="level">Lv.${p.gc_level} (${p.grade})</div>
+          <div class="name">${p.gc_name}</div>
         </div>
 
         <div class="card-back">
-          ${p.guild_name}
+          <div>${p.guild_name}</div>
+          <div>전투력: -</div>
+          <div>특징: -</div>
         </div>
 
       </div>
@@ -44,7 +52,10 @@ function renderCards() {
     container.appendChild(card);
   }
 
-  currentIndex += pageSize;
+  currentIndex = end;
+
+  document.getElementById("loadMoreBtn").style.display =
+    currentIndex >= filteredData.length ? "none" : "block";
 }
 
 function loadMore() {
@@ -54,13 +65,11 @@ function loadMore() {
 function searchCard() {
   const keyword = document.getElementById("searchInput").value;
 
-  const container = document.getElementById("cardContainer");
-  container.innerHTML = "";
-  currentIndex = 0;
+  filteredData = originalData.filter(p =>
+    p.gc_name.includes(keyword)
+  );
 
-  allData = allData.filter(p => p.gc_name.includes(keyword));
-
-  renderCards();
+  renderCards(true);
 }
 
 loadData();
