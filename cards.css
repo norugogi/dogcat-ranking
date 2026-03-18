@@ -48,14 +48,14 @@
 /* 🔴 레벨 */
 .level {
   position: absolute;
-  bottom: 36%;   /* ⬇ 아래로 이동 */
+  bottom: 30%;   /* ⬇ 아래로 이동 */
   left: 28%;     /* ➡ 중앙쪽으로 */
 }
 
 /* 🟢 토벌 */
 .grade {
   position: absolute;
-  bottom: 36%;   /* 레벨과 동일 라인 */
+  bottom: 30%;   /* 레벨과 동일 라인 */
   right: 28%;    /* ➡ 중앙쪽으로 */
 }
 
