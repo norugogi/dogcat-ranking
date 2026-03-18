@@ -1,65 +1,78 @@
-const data = [
-  {
-    gc_name: "맛나는꼬꼬",
-    gc_level: 93,
-    class: "AbyssRevenant",
-    grade: 24
-  },
-  {
-    gc_name: "아톰",
-    gc_level: 92,
-    class: "Enforcer",
-    grade: 22
-  }
-];
-
+let allData = [];
 let visibleCount = 0;
-const loadCount = 10;
+const loadStep = 30;
 
-function createCard(character) {
-  const isGold = character.grade >= 24;
-  const imgPath = `assets_classes/${character.class}_${isGold ? "gold" : "gray"}.png`;
+// JSON 로드 (실전)
+fetch("./all_servers_ranking.json")
+  .then(res => res.json())
+  .then(json => {
+    // 🔥 필수 데이터만 정리 (성능 + 안정)
+    allData = json.map(c => ({
+      name: c.gc_name || "이름없음",
+      level: c.gc_level || 0,
+      class: c.class || "Unknown",
+      grade: Number(c.string_map?.grade || 0)
+    }));
 
-  const card = document.createElement("div");
-  card.className = "card";
+    renderMore();
+  })
+  .catch(err => {
+    console.error("JSON 로드 실패:", err);
+  });
 
-  card.innerHTML = `
-    <img src="${imgPath}" class="card-bg">
+
+// 카드 생성
+function createCard(c) {
+  const isGold = c.grade >= 24;
+
+  const imgPath = `assets_classes/${c.class}_${isGold ? "gold" : "gray"}.png`;
+
+  const el = document.createElement("div");
+  el.className = "card";
+
+  el.innerHTML = `
+    <img src="${imgPath}" class="card-bg" onerror="this.src='assets_classes/Enforcer_gray.png'">
 
     <div class="card-inner">
       <div class="card-front">
-        <span class="name">Lv.${character.gc_level} ${character.gc_name}</span>
+        <div class="name">Lv.${c.level} ${c.name}</div>
       </div>
 
       <div class="card-back">
-        <span class="desc">특징 없음</span>
+        <div class="desc">토벌 ${c.grade}</div>
       </div>
     </div>
   `;
 
-  return card;
+  return el;
 }
 
-function loadMore() {
+
+// 더보기 (실전)
+function renderMore() {
   const container = document.getElementById("cardContainer");
 
-  for (let i = visibleCount; i < visibleCount + loadCount && i < data.length; i++) {
-    container.appendChild(createCard(data[i]));
+  const end = Math.min(visibleCount + loadStep, allData.length);
+
+  for (let i = visibleCount; i < end; i++) {
+    container.appendChild(createCard(allData[i]));
   }
 
-  visibleCount += loadCount;
+  visibleCount = end;
 }
 
+
+// 검색 (실전)
 function searchCard() {
   const keyword = document.getElementById("searchInput").value.toLowerCase();
   const container = document.getElementById("cardContainer");
 
   container.innerHTML = "";
+  visibleCount = 0;
 
-  data
-    .filter(c => c.gc_name.toLowerCase().includes(keyword))
-    .forEach(c => container.appendChild(createCard(c)));
+  const filtered = allData.filter(c =>
+    c.name.toLowerCase().includes(keyword)
+  );
+
+  filtered.forEach(c => container.appendChild(createCard(c)));
 }
-
-// 초기 로딩
-loadMore();
