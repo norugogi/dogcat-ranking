@@ -48,29 +48,23 @@
 /* 🔴 레벨 */
 .level {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  color: white;
-  font-weight: bold;
+  bottom: 36%;   /* ⬇ 아래로 이동 */
+  left: 28%;     /* ➡ 중앙쪽으로 */
 }
 
 /* 🟢 토벌 */
 .grade {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  color: white;
-  font-weight: bold;
+  bottom: 36%;   /* 레벨과 동일 라인 */
+  right: 28%;    /* ➡ 중앙쪽으로 */
 }
 
-/* 🔵 닉네임 */
+/* ⚪ 닉네임 */
 .name {
   position: absolute;
-  bottom: 32px;
+  bottom: 20%;   /* ⬆ 위로 이동 */
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  font-weight: bold;
 }
 
 /* 뒷면 */
