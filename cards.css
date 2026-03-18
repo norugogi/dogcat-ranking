@@ -1,111 +1,21 @@
-body {
-  margin:0;
-  background:#212121;
-  color:white;
-  font-family:Arial;
-}
-
-/* 레이아웃 */
-.layout {
-  display:flex;
-}
-
-/* 사이드바 */
-.sidebar {
-  width:220px;
-  height:100vh;
-  background:#1a1a1a;
-  padding:20px;
-  border-right:1px solid #333;
-}
-
-.menu-title {
-  font-size:13px;
-  color:#888;
-  margin-top:20px;
-  margin-bottom:10px;
-}
-
-.menu-item {
-  padding:10px;
-  border-radius:6px;
-  cursor:pointer;
-  margin-bottom:5px;
-}
-
-.menu-item:hover {
-  background:#2c2c2c;
-}
-
-.menu-item.active {
-  background:#d4af37;
-  color:#000;
-}
-
-/* 콘텐츠 */
-.content {
-  flex:1;
-  padding:20px;
-  text-align:center;
-}
-
-/* 테이블 */
-table {
-  width:80%;
-  margin:auto;
-  border-collapse:collapse;
-}
-
-th, td {
-  padding:10px;
-  border-bottom:1px solid #444;
-}
-
-th {
-  background:#333;
-}
-
-tr:hover {
-  background:#2a2a2a;
-}
-
-/* 검색 */
-.search-box {
-  margin:20px;
-}
-
-.search-box input {
-  padding:8px;
-  width:200px;
-}
-
-.search-box button {
-  padding:8px;
-}
-
-/* 카드 영역 */
+/* 카드 그리드 */
 #cardContainer {
   display:grid;
-  grid-template-columns: repeat(5, 180px);
-  justify-content:center;
+  grid-template-columns: repeat(5, 160px);
   gap:20px;
+  justify-content:center;
   padding:20px;
 }
 
 /* 카드 */
 .card {
-  width:180px;
-  height:240px;
+  width:160px;
+  aspect-ratio:3/4;
   perspective:1000px;
   cursor:pointer;
-  transition:0.2s;
 }
 
-.card.highlight {
-  outline:3px solid gold;
-  transform:scale(1.1);
-}
-
+/* 카드 내부 */
 .card-inner {
   width:100%;
   height:100%;
@@ -114,7 +24,7 @@ tr:hover {
 }
 
 .card.flipped .card-inner {
-  transform:rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* 앞면 */
@@ -123,38 +33,40 @@ tr:hover {
   width:100%;
   height:100%;
   backface-visibility:hidden;
-  background-image:var(--gray-img);
-  background-size:cover;
+  background-image: var(--gray-img);
+  background-size: cover;
 }
 
+/* 🔥 hover 복구 */
 .card:hover .card-front {
-  background-image:var(--gold-img);
+  background-image: var(--gold-img);
 }
 
-/* 텍스트 위치 */
+/* 🔴 레벨 */
 .level {
   position:absolute;
-  bottom:28%;
+  bottom:34%;
   left:18%;
-  font-size:0.9em;
+  color:white;
   font-weight:bold;
 }
 
+/* 🟢 토벌 */
 .grade {
   position:absolute;
-  bottom:28%;
+  bottom:34%;
   right:18%;
-  font-size:0.9em;
+  color:white;
   font-weight:bold;
-  color:#d4af37;
 }
 
+/* 🔵 닉네임 */
 .name {
   position:absolute;
-  bottom:18%;
+  bottom:16%;
   left:50%;
   transform:translateX(-50%);
-  font-size:1em;
+  color:white;
   font-weight:bold;
 }
 
@@ -166,16 +78,14 @@ tr:hover {
   backface-visibility:hidden;
   transform:rotateY(180deg);
   background:#1f1f1f;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:10px;
 }
 
-/* 더보기 */
-#loadMoreBtn {
-  margin:20px;
-  padding:10px 20px;
-  cursor:pointer;
+/* 가독성 */
+.level, .grade, .name {
+  text-shadow:0 0 6px rgba(0,0,0,0.9);
 }
