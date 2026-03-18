@@ -1,0 +1,137 @@
+body {
+  background:#212121;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+
+/* 검색창 */
+.search-box {
+  margin:20px;
+}
+
+.search-box input {
+  padding:8px;
+  width:200px;
+}
+
+.search-box button {
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+/* 카드 그리드 */
+#cardContainer {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap:15px;
+  padding:20px;
+}
+
+/* 카드 */
+.card {
+  width:160px;
+  aspect-ratio:3/4;
+  perspective:1000px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* 🔥 검색 강조 */
+.card.highlight {
+  outline:3px solid gold;
+  transform:scale(1.1);
+}
+
+.card-inner {
+  width:100%;
+  height:100%;
+  transition:transform 0.6s;
+  transform-style:preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 앞면 */
+.card-front {
+  position:relative;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+
+  background-image: var(--gray-img);
+  background-size: cover;
+}
+
+/* hover */
+.card:hover .card-front {
+  background-image: var(--gold-img);
+}
+
+/* 레벨 */
+.level {
+  position:absolute;
+  bottom:28%;
+  left:18%;
+  font-size:0.9em;
+  font-weight:bold;
+}
+
+/* 토벌 */
+.grade {
+  position:absolute;
+  bottom:28%;
+  right:18%;
+  font-size:0.9em;
+  font-weight:bold;
+  color:#d4af37;
+}
+
+/* 닉네임 */
+.name {
+  position:absolute;
+  bottom:12%;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:1em;
+  font-weight:bold;
+  max-width:120px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* 뒷면 */
+.card-back {
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  transform:rotateY(180deg);
+
+  background:#1f1f1f;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+
+.back-guild {
+  font-size:18px;
+  font-weight:bold;
+  color:#d4af37;
+}
+
+.back-power,
+.back-desc {
+  font-size:14px;
+  color:#ccc;
+}
+
+/* 가독성 */
+.level, .grade, .name {
+  text-shadow:0 0 6px rgba(0,0,0,0.8);
+}
