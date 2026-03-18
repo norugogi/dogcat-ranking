@@ -9,10 +9,9 @@
 
 /* 카드 */
 .card {
-  width:160px;
-  aspect-ratio:3/4;
+  width:180px;        /* ⭐ 고정 */
+  height:260px;       /* ⭐ 고정 */
   perspective:1000px;
-  cursor:pointer;
 }
 
 /* 카드 내부 */
