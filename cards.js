@@ -33,7 +33,30 @@ function renderCards(reset = false) {
       <div class="card-inner">
 
         <div class="card-front">
-          <img src="${img}">
+          card.innerHTML = `
+<div class="card"
+     style="
+     --gray-img: url('assets_classes/${p.class}_gray.png');
+     --gold-img: url('assets_classes/${p.class}_gold.png');
+     ">
+
+  <div class="card-inner">
+
+    <div class="card-front">
+      <div class="level">Lv.${p.gc_level}</div>
+      <div class="grade">${p.grade}</div>
+      <div class="name">${p.gc_name}</div>
+    </div>
+
+    <div class="card-back">
+      <div class="back-guild">${p.guild_name}</div>
+      <div class="back-power">전투력: -</div>
+      <div class="back-desc">특징: -</div>
+    </div>
+
+  </div>
+</div>
+`;
           <div class="level">Lv.${p.gc_level} (${p.grade})</div>
           <div class="name">${p.gc_name}</div>
         </div>
