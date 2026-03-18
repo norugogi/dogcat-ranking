@@ -62,7 +62,7 @@
 /* ⚪ 닉네임 */
 .name {
   position: absolute;
-  bottom: 25%;   /* ⬆ 위로 이동 */
+  bottom: 28%;   /* ⬆ 위로 이동 */
   left: 50%;
   transform: translateX(-50%);
 }
