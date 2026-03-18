@@ -26,38 +26,34 @@ function renderCards(reset=false) {
     const p = filteredData[i];
 
     const card = document.createElement("div");
+    card.className = "card";
 
-    card.innerHTML = `
-      <div class="card"
-      style="
+    card.style = `
       --gray-img: url('assets_classes/${p.class}_gray.png');
       --gold-img: url('assets_classes/${p.class}_gold.png');
-      ">
-
-        <div class="card-inner">
-
-          <div class="card-front">
-            <div class="level">Lv.${p.gc_level}</div>
-            <div class="grade">${p.grade}</div>
-            <div class="name">${p.gc_name}</div>
-          </div>
-
-          <div class="card-back">
-            <div>${p.guild_name}</div>
-            <div>전투력: -</div>
-            <div>특징: -</div>
-          </div>
-
-        </div>
-
-      </div>
     `;
 
-    card.firstElementChild.onclick = () => {
-      card.firstElementChild.classList.toggle("flipped");
-    };
+  card.innerHTML = `
+    <div class="card-inner">
 
-    container.appendChild(card);
+      <div class="card-front">
+        <div class="level">Lv.${p.gc_level}</div>
+        <div class="grade">${p.grade}</div>
+        <div class="name">${p.gc_name}</div>
+    </div>
+
+    <div class="card-back">
+      <div>${p.guild_name}</div>
+      <div>전투력: -</div>
+      <div>특징: -</div>
+    </div>
+
+  </div>
+`;
+
+card.onclick = () => card.classList.toggle("flipped");
+
+container.appendChild(card);
   }
 
   currentIndex = end;
