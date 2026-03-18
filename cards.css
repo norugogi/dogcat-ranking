@@ -1,11 +1,75 @@
 body {
+  margin:0;
   background:#212121;
   color:white;
   font-family:Arial;
+}
+
+/* 레이아웃 */
+.layout {
+  display:flex;
+}
+
+/* 사이드바 */
+.sidebar {
+  width:220px;
+  height:100vh;
+  background:#1a1a1a;
+  padding:20px;
+  border-right:1px solid #333;
+}
+
+.menu-title {
+  font-size:13px;
+  color:#888;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.menu-item {
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+  margin-bottom:5px;
+}
+
+.menu-item:hover {
+  background:#2c2c2c;
+}
+
+.menu-item.active {
+  background:#d4af37;
+  color:#000;
+}
+
+/* 콘텐츠 */
+.content {
+  flex:1;
+  padding:20px;
   text-align:center;
 }
 
-/* 검색창 */
+/* 테이블 */
+table {
+  width:80%;
+  margin:auto;
+  border-collapse:collapse;
+}
+
+th, td {
+  padding:10px;
+  border-bottom:1px solid #444;
+}
+
+th {
+  background:#333;
+}
+
+tr:hover {
+  background:#2a2a2a;
+}
+
+/* 검색 */
 .search-box {
   margin:20px;
 }
@@ -16,28 +80,27 @@ body {
 }
 
 .search-box button {
-  padding:8px 12px;
-  cursor:pointer;
+  padding:8px;
 }
 
-/* 카드 그리드 */
+/* 카드 영역 */
 #cardContainer {
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap:15px;
+  grid-template-columns: repeat(5, 180px);
+  justify-content:center;
+  gap:20px;
   padding:20px;
 }
 
 /* 카드 */
 .card {
-  width:160px;
-  aspect-ratio:3/4;
+  width:180px;
+  height:240px;
   perspective:1000px;
   cursor:pointer;
   transition:0.2s;
 }
 
-/* 🔥 검색 강조 */
 .card.highlight {
   outline:3px solid gold;
   transform:scale(1.1);
@@ -51,7 +114,7 @@ body {
 }
 
 .card.flipped .card-inner {
-  transform: rotateY(180deg);
+  transform:rotateY(180deg);
 }
 
 /* 앞면 */
@@ -60,17 +123,15 @@ body {
   width:100%;
   height:100%;
   backface-visibility:hidden;
-
-  background-image: var(--gray-img);
-  background-size: cover;
+  background-image:var(--gray-img);
+  background-size:cover;
 }
 
-/* hover */
 .card:hover .card-front {
-  background-image: var(--gold-img);
+  background-image:var(--gold-img);
 }
 
-/* 레벨 */
+/* 텍스트 위치 */
 .level {
   position:absolute;
   bottom:28%;
@@ -79,7 +140,6 @@ body {
   font-weight:bold;
 }
 
-/* 토벌 */
 .grade {
   position:absolute;
   bottom:28%;
@@ -89,18 +149,13 @@ body {
   color:#d4af37;
 }
 
-/* 닉네임 */
 .name {
   position:absolute;
-  bottom:12%;
+  bottom:18%;
   left:50%;
   transform:translateX(-50%);
   font-size:1em;
   font-weight:bold;
-  max-width:120px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
 }
 
 /* 뒷면 */
@@ -110,7 +165,6 @@ body {
   height:100%;
   backface-visibility:hidden;
   transform:rotateY(180deg);
-
   background:#1f1f1f;
   display:flex;
   flex-direction:column;
@@ -119,19 +173,9 @@ body {
   gap:10px;
 }
 
-.back-guild {
-  font-size:18px;
-  font-weight:bold;
-  color:#d4af37;
-}
-
-.back-power,
-.back-desc {
-  font-size:14px;
-  color:#ccc;
-}
-
-/* 가독성 */
-.level, .grade, .name {
-  text-shadow:0 0 6px rgba(0,0,0,0.8);
+/* 더보기 */
+#loadMoreBtn {
+  margin:20px;
+  padding:10px 20px;
+  cursor:pointer;
 }
