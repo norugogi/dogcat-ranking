@@ -1,113 +1,66 @@
 let allData = [];
-let visibleCount = 20;
+let currentIndex = 0;
+const pageSize = 20;
 
-/* 메뉴 활성화 */
-function setActive(el){
-  document.querySelectorAll(".menu-item").forEach(m=>m.classList.remove("active"));
-  el.classList.add("active");
-}
-
-/* 테이블 보기 */
-function showTable(el){
-  setActive(el);
-  document.getElementById("tableSection").style.display = "block";
-  document.getElementById("cardSection").style.display = "none";
-}
-
-/* 카드 보기 */
-function showCards(el){
-  setActive(el);
-  document.getElementById("tableSection").style.display = "none";
-  document.getElementById("cardSection").style.display = "block";
-
-  if(allData.length === 0){
-    loadData();
-  }
-}
-
-/* 데이터 로드 */
-async function loadData(){
+async function loadData() {
   const res = await fetch("all_servers_ranking.json");
-  const data = await res.json();
-
-  allData = data.sort((a,b)=>b.gc_level-a.gc_level);
-
+  allData = await res.json();
   renderCards();
 }
 
-/* 카드 렌더 */
-function renderCards(){
+function renderCards() {
   const container = document.getElementById("cardContainer");
-  container.innerHTML = "";
 
-  const slice = allData.slice(0, visibleCount);
-
-  slice.forEach(player=>{
-    const className = player.class;
-
-    const grayImg = `assets_classes/${className}_gray.png`;
-    const goldImg = `assets_classes/${className}_gold.png`;
+  for (let i = currentIndex; i < currentIndex + pageSize && i < allData.length; i++) {
+    const p = allData[i];
 
     const card = document.createElement("div");
     card.className = "card";
 
-    card.setAttribute("data-name", player.gc_name);
-
-    card.style.setProperty("--gray-img", `url('${grayImg}')`);
-    card.style.setProperty("--gold-img", `url('${goldImg}')`);
+    const imgPath = `assets_classes/${p.class}_gold.png`;
 
     card.innerHTML = `
       <div class="card-inner">
+
         <div class="card-front">
-          <div class="level">Lv.${player.gc_level}</div>
-          <div class="grade">${player.grade}</div>
-          <div class="name">${player.gc_name}</div>
+          <img src="${imgPath}" style="width:100%; height:100%; object-fit:cover;">
+          <div style="position:absolute; top:10px; left:10px; color:white; font-weight:bold;">
+            Lv.${p.gc_level} (${p.grade})
+          </div>
+          <div style="position:absolute; bottom:20px; width:100%; text-align:center; color:white; font-size:18px;">
+            ${p.gc_name}
+          </div>
         </div>
 
         <div class="card-back">
-          <div>${player.guild_name}</div>
-          <div>전투력: -</div>
-          <div>특징: -</div>
+          ${p.guild_name}
         </div>
+
       </div>
     `;
 
-    card.onclick = ()=>card.classList.toggle("flipped");
+    card.onclick = () => card.classList.toggle("flipped");
 
     container.appendChild(card);
-  });
+  }
+
+  currentIndex += pageSize;
 }
 
-/* 더보기 */
-function loadMore(){
-  visibleCount += 20;
+function loadMore() {
   renderCards();
 }
 
-/* 검색 */
-function searchCard(){
-  const input = document.getElementById("searchInput").value.trim();
-  if(!input) return;
+function searchCard() {
+  const keyword = document.getElementById("searchInput").value;
 
-  const cards = document.querySelectorAll(".card");
+  const container = document.getElementById("cardContainer");
+  container.innerHTML = "";
+  currentIndex = 0;
 
-  let found = false;
+  allData = allData.filter(p => p.gc_name.includes(keyword));
 
-  cards.forEach(card=>{
-    card.classList.remove("highlight");
-
-    if(card.dataset.name.includes(input)){
-      found = true;
-      card.classList.add("highlight");
-
-      card.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-      });
-    }
-  });
-
-  if(!found){
-    alert("닉네임 없음");
-  }
+  renderCards();
 }
+
+loadData();
