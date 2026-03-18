@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>DOG & CAT 결사 시스템</title>
-
+<title>카드 프로필</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,51 +13,31 @@
   <!-- 🔥 좌측 메뉴 -->
   <div class="sidebar">
     <div class="menu-title">결사원</div>
-    <div class="menu-item active" onclick="showTable(this)">전체보기</div>
+    <div class="menu-item" onclick="location.href='index.html'">전체보기</div>
 
     <div class="menu-title">카드</div>
-    <div class="menu-item" onclick="showCards(this)">카드 프로필</div>
+    <div class="menu-item active">카드 프로필</div>
   </div>
 
-  <!-- 🔥 메인 영역 -->
+  <!-- 🔥 우측 컨텐츠 -->
   <div class="content">
 
-    <h1>DOG & CAT 결사원</h1>
+    <h1>카드 프로필</h1>
 
-    <!-- 🔹 테이블 -->
-    <div id="tableSection">
-      <table>
-        <thead>
-          <tr>
-            <th>결사</th>
-            <th>캐릭터</th>
-            <th>레벨</th>
-            <th>직업</th>
-            <th>토벌</th>
-          </tr>
-        </thead>
-        <tbody id="playerList"></tbody>
-      </table>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="닉네임 검색">
+      <button onclick="searchCard()">검색</button>
     </div>
 
-    <!-- 🔹 카드 -->
-    <div id="cardSection" style="display:none;">
+    <div id="cardContainer"></div>
 
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="닉네임 검색">
-        <button onclick="searchCard()">검색</button>
-      </div>
-
-      <div id="cardContainer"></div>
-
-      <button id="loadMoreBtn" onclick="loadMore()">더보기</button>
-
-    </div>
+    <button id="loadMoreBtn" onclick="loadMore()">더보기</button>
 
   </div>
+
 </div>
 
-<script src="script.js"></script>
+<script src="cards.js"></script>
 
 </body>
 </html>
