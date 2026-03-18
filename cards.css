@@ -1,10 +1,13 @@
-/* 카드 그리드 */
-#cardContainer {
-  display: grid;
-  grid-template-columns: repeat(5, 180px);
-  gap: 30px;
-  justify-content: center;
+body {
+  background: #0b0b0b;
+  margin: 0;
   padding: 20px;
+}
+
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 /* 카드 */
@@ -12,79 +15,60 @@
   width: 180px;
   height: 260px;
   perspective: 1000px;
-  cursor: pointer;
 }
 
-/* 카드 내부 */
+/* 회전 */
 .card-inner {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  position: relative;
 }
 
-/* 뒤집기 */
-.card.flipped .card-inner {
+.card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
 /* 앞면 */
 .card-front {
-  position: relative;
+  position: relative; /* ⭐ 핵심 */
   width: 100%;
   height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(#3a3a3a, #1e1e1e);
   backface-visibility: hidden;
-
-  background-image: var(--gray-img);
-  background-size: 100% 100%;
 }
 
 /* hover 시 골드 */
 .card:hover .card-front {
-  background-image: var(--gold-img);
+  background: linear-gradient(#d4af37, #8a6d1f);
 }
 
 /* 🔴 레벨 */
 .level {
   position: absolute;
-  bottom: 30%;   /* ⬇ 아래로 이동 */
-  left: 28%;     /* ➡ 중앙쪽으로 */
+  bottom: 38%;
+  left: 30%;
+  color: white;
+  font-weight: bold;
 }
 
 /* 🟢 토벌 */
 .grade {
   position: absolute;
-  bottom: 30%;   /* 레벨과 동일 라인 */
-  right: 28%;    /* ➡ 중앙쪽으로 */
+  bottom: 38%;
+  right: 30%;
+  color: white;
+  font-weight: bold;
 }
 
 /* ⚪ 닉네임 */
 .name {
   position: absolute;
-  bottom: 28%;   /* ⬆ 위로 이동 */
+  bottom: 18%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-/* 뒷면 */
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-
-  background: #1f1f1f;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-/* 가독성 */
-.level, .grade, .name {
-  text-shadow: 0 0 6px rgba(0,0,0,0.9);
+  color: white;
+  font-weight: bold;
 }
