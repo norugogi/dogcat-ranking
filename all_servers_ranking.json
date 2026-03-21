@@ -42,13 +42,6 @@
     "guild_name": "CATT"
   },
   {
-    "gc_name": "꼬꼬부캐",
-    "gc_level": 65,
-    "class": "AbyssRevenant",
-    "grade": "16",
-    "guild_name": "CATT"
-  },
-  {
     "gc_name": "아톰",
     "gc_level": 92,
     "class": "SolarSentinel",
@@ -57,7 +50,7 @@
   },
   {
     "gc_name": "은빈",
-    "gc_level": 90,
+    "gc_level": 91,
     "class": "SolarSentinel",
     "grade": "24",
     "guild_name": "DOG"
@@ -134,14 +127,14 @@
   },
   {
     "gc_name": "더춘식",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "MirageBlade",
     "grade": "24",
     "guild_name": "DOG"
   },
   {
     "gc_name": "프로도",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "MirageBlade",
     "grade": "24",
     "guild_name": "CATT"
@@ -161,22 +154,22 @@
     "guild_name": "CATT"
   },
   {
-    "gc_name": "류마",
-    "gc_level": 86,
+    "gc_name": "검방",
+    "gc_level": 87,
     "class": "MirageBlade",
     "grade": "22",
     "guild_name": "CATT"
   },
   {
-    "gc_name": "검방",
-    "gc_level": 86,
+    "gc_name": "류마",
+    "gc_level": 87,
     "class": "MirageBlade",
-    "grade": "21",
+    "grade": "22",
     "guild_name": "CATT"
   },
   {
     "gc_name": "시바샤아꼬",
-    "gc_level": 86,
+    "gc_level": 87,
     "class": "MirageBlade",
     "grade": "21",
     "guild_name": "CATT"
@@ -204,14 +197,14 @@
   },
   {
     "gc_name": "로빈후드",
-    "gc_level": 89,
+    "gc_level": 90,
     "class": "IncenseArcher",
     "grade": "24",
     "guild_name": "DOG"
   },
   {
     "gc_name": "베찌",
-    "gc_level": 89,
+    "gc_level": 90,
     "class": "IncenseArcher",
     "grade": "24",
     "guild_name": "DOG"
@@ -234,7 +227,7 @@
     "gc_name": "카린",
     "gc_level": 89,
     "class": "IncenseArcher",
-    "grade": "23",
+    "grade": "24",
     "guild_name": "DOG"
   },
   {
@@ -246,7 +239,7 @@
   },
   {
     "gc_name": "리챔",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "IncenseArcher",
     "grade": "24",
     "guild_name": "CATT"
@@ -266,10 +259,10 @@
     "guild_name": "CATT"
   },
   {
-    "gc_name": "야추",
+    "gc_name": "녹색영약",
     "gc_level": 88,
     "class": "IncenseArcher",
-    "grade": "23",
+    "grade": "24",
     "guild_name": "CATT"
   },
   {
@@ -280,15 +273,15 @@
     "guild_name": "CATT"
   },
   {
-    "gc_name": "녹색영약",
-    "gc_level": 87,
+    "gc_name": "야추",
+    "gc_level": 88,
     "class": "IncenseArcher",
-    "grade": "24",
+    "grade": "23",
     "guild_name": "CATT"
   },
   {
     "gc_name": "커먼",
-    "gc_level": 87,
+    "gc_level": 88,
     "class": "IncenseArcher",
     "grade": "24",
     "guild_name": "DOG"
@@ -337,14 +330,14 @@
   },
   {
     "gc_name": "reina",
-    "gc_level": 83,
+    "gc_level": 84,
     "class": "IncenseArcher",
     "grade": "20",
     "guild_name": "CATT"
   },
   {
     "gc_name": "거리",
-    "gc_level": 82,
+    "gc_level": 83,
     "class": "IncenseArcher",
     "grade": "20",
     "guild_name": "CATT"
@@ -372,21 +365,21 @@
   },
   {
     "gc_name": "보축",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "RuneScribe",
-    "grade": "23",
+    "grade": "24",
     "guild_name": "DOG"
   },
   {
     "gc_name": "좀비",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "RuneScribe",
-    "grade": "23",
+    "grade": "24",
     "guild_name": "DOG"
   },
   {
     "gc_name": "바벨",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "RuneScribe",
     "grade": "24",
     "guild_name": "DOG"
@@ -402,7 +395,7 @@
     "gc_name": "강모",
     "gc_level": 88,
     "class": "RuneScribe",
-    "grade": "23",
+    "grade": "24",
     "guild_name": "DOG"
   },
   {
@@ -413,15 +406,15 @@
     "guild_name": "DOG"
   },
   {
-    "gc_name": "도라",
+    "gc_name": "시바키지",
     "gc_level": 88,
     "class": "RuneScribe",
     "grade": "23",
     "guild_name": "CATT"
   },
   {
-    "gc_name": "시바키지",
-    "gc_level": 87,
+    "gc_name": "도라",
+    "gc_level": 88,
     "class": "RuneScribe",
     "grade": "23",
     "guild_name": "CATT"
@@ -430,7 +423,7 @@
     "gc_name": "김부각",
     "gc_level": 87,
     "class": "RuneScribe",
-    "grade": "21",
+    "grade": "23",
     "guild_name": "CATT"
   },
   {
@@ -448,18 +441,18 @@
     "guild_name": "DOG"
   },
   {
-    "gc_name": "델라꼬",
-    "gc_level": 86,
-    "class": "RuneScribe",
-    "grade": "24",
-    "guild_name": "DOG"
-  },
-  {
     "gc_name": "사탄의한",
     "gc_level": 86,
     "class": "RuneScribe",
     "grade": "22",
     "guild_name": "CATT"
+  },
+  {
+    "gc_name": "델라꼬",
+    "gc_level": 86,
+    "class": "RuneScribe",
+    "grade": "24",
+    "guild_name": "DOG"
   },
   {
     "gc_name": "오월의우니",
@@ -469,14 +462,14 @@
     "guild_name": "DOG"
   },
   {
-    "gc_name": "소마",
+    "gc_name": "시바화아타",
     "gc_level": 86,
     "class": "RuneScribe",
     "grade": "21",
     "guild_name": "CATT"
   },
   {
-    "gc_name": "시바화아타",
+    "gc_name": "소마",
     "gc_level": 86,
     "class": "RuneScribe",
     "grade": "21",
@@ -493,7 +486,7 @@
     "gc_name": "범꼬",
     "gc_level": 85,
     "class": "RuneScribe",
-    "grade": "21",
+    "grade": "22",
     "guild_name": "CATT"
   },
   {
@@ -511,15 +504,15 @@
     "guild_name": "DOG"
   },
   {
-    "gc_name": "시바멍멍",
+    "gc_name": "물약",
     "gc_level": 85,
     "class": "RuneScribe",
     "grade": "20",
     "guild_name": "CATT"
   },
   {
-    "gc_name": "물약",
-    "gc_level": 84,
+    "gc_name": "시바멍멍",
+    "gc_level": 85,
     "class": "RuneScribe",
     "grade": "20",
     "guild_name": "CATT"
@@ -533,9 +526,9 @@
   },
   {
     "gc_name": "모모쨩",
-    "gc_level": 83,
+    "gc_level": 84,
     "class": "RuneScribe",
-    "grade": "19",
+    "grade": "20",
     "guild_name": "CATT"
   },
   {
@@ -546,8 +539,15 @@
     "guild_name": "CATT"
   },
   {
+    "gc_name": "화수아",
+    "gc_level": 81,
+    "class": "RuneScribe",
+    "grade": "15",
+    "guild_name": "CATT"
+  },
+  {
     "gc_name": "바라문",
-    "gc_level": 79,
+    "gc_level": 80,
     "class": "RuneScribe",
     "grade": "18",
     "guild_name": "CATT"
@@ -589,7 +589,7 @@
   },
   {
     "gc_name": "난동",
-    "gc_level": 90,
+    "gc_level": 91,
     "class": "Enforcer",
     "grade": "24",
     "guild_name": "DOG"
@@ -610,21 +610,21 @@
   },
   {
     "gc_name": "캣해일",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "Enforcer",
     "grade": "23",
     "guild_name": "CATT"
   },
   {
     "gc_name": "진빼이꼬",
-    "gc_level": 88,
+    "gc_level": 89,
     "class": "Enforcer",
     "grade": "24",
     "guild_name": "CATT"
   },
   {
     "gc_name": "로저",
-    "gc_level": 87,
+    "gc_level": 88,
     "class": "Enforcer",
     "grade": "24",
     "guild_name": "CATT"
@@ -633,7 +633,7 @@
     "gc_name": "호쓰",
     "gc_level": 87,
     "class": "Enforcer",
-    "grade": "23",
+    "grade": "24",
     "guild_name": "CATT"
   },
   {
@@ -645,14 +645,14 @@
   },
   {
     "gc_name": "탄지꼬",
-    "gc_level": 85,
+    "gc_level": 86,
     "class": "Enforcer",
     "grade": "23",
     "guild_name": "CATT"
   },
   {
     "gc_name": "필레노우체",
-    "gc_level": 84,
+    "gc_level": 85,
     "class": "Enforcer",
     "grade": "20",
     "guild_name": "CATT"
@@ -680,7 +680,7 @@
   },
   {
     "gc_name": "봄이오나봄",
-    "gc_level": 82,
+    "gc_level": 83,
     "class": "Enforcer",
     "grade": "17",
     "guild_name": "CATT"
