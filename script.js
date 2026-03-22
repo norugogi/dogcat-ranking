@@ -59,6 +59,7 @@ function render(list){
  * 🔥 메뉴 (결사원 관련)
  ***************************************/
 function showAll(){
+
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
