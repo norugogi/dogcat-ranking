@@ -12,7 +12,7 @@ body {
   color: #fff;
 }
 
-/* 좌측 메뉴 */
+/* 사이드 */
 .sidebar {
   width: 220px;
   height: 100vh;
@@ -33,7 +33,6 @@ body {
   border-radius: 6px;
   cursor: pointer;
   margin-bottom: 6px;
-  transition: 0.2s;
 }
 
 .menu-item:hover {
@@ -46,7 +45,7 @@ body {
   font-weight: bold;
 }
 
-/* 메인 영역 */
+/* 메인 */
 .main {
   margin-left: 240px;
   padding: 30px;
@@ -56,13 +55,12 @@ body {
   text-align: center;
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .sub {
   text-align: center;
   color: #aaa;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* 테이블 */
@@ -85,14 +83,42 @@ tbody tr:hover {
   background: #2a2b30;
 }
 
-/* 페이지 */
-#rubyPage { display: none; }
+/* 루비 */
+.bar-wrap {
+  width: 100%;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.bar {
+  height: 100%;
+  background: #ff4d4d;
+  width: 0%;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+select {
+  background: #2a2b30;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  margin: 0 4px;
+}
+
+#rubyPage { display:none; }
 </style>
 </head>
 
 <body>
 
-<!-- 좌측 메뉴 -->
+<!-- 메뉴 -->
 <div class="sidebar">
 
   <div class="menu-title">DOG & CAT 결사원</div>
@@ -100,7 +126,7 @@ tbody tr:hover {
   <div class="menu-item" onclick="showDOG(); menuClick(this)">DOG 결사원</div>
   <div class="menu-item" onclick="showCAT(); menuClick(this)">CAT 결사원</div>
 
-  <div class="menu-title">카드 프로필</div>
+  <div class="menu-title">카드 프로필(클릭X)</div>
   <div class="menu-item" onclick="goCards()">카드 프로필 보기</div>
 
   <div class="menu-title">결사 통계</div>
@@ -114,14 +140,11 @@ tbody tr:hover {
 <!-- 메인 -->
 <div class="main">
 
-  <!-- 메인 페이지 -->
+  <!-- 메인 -->
   <div id="mainPage">
 
     <div class="title">DOG & CAT 결사원 리스트</div>
-    <div class="sub">
-      갱신 날짜: -<br>
-      서버: 아르테5
-    </div>
+    <div class="sub">갱신 날짜: -<br>서버: 아르테5</div>
 
     <table>
       <thead>
@@ -138,39 +161,42 @@ tbody tr:hover {
 
   </div>
 
-  <!-- 루비 페이지 -->
+  <!-- 루비 -->
   <div id="rubyPage">
 
     <div class="title">루비 공헌 순위</div>
 
-    <div style="margin-bottom:20px;">
-      그룹:
-      <select id="groupFilter"></select>
+    <!-- 필터 (JS가 찾는 id 그대로 유지) -->
+    <div class="center">
+      <select id="groupFilter">
+        <option value="all">전체</option>
+        <option value="DOG">DOG</option>
+        <option value="CAT">CAT</option>
+      </select>
 
-      시즌:
       <select id="seasonFilter"></select>
-
-      주차:
       <select id="weekFilter"></select>
     </div>
 
-    <div style="width:300px; background:#333;">
-      <div id="rubyBar" style="height:20px; background:#d4af37; width:0%"></div>
+    <!-- 게이지 -->
+    <div class="bar-wrap">
+      <div id="rubyBar" class="bar"></div>
     </div>
 
-    <div id="rubyText"></div>
-    <div id="rubyPercent"></div>
+    <div class="center" id="rubyText"></div>
+    <div class="center" id="rubyPercent"></div>
 
+    <!-- 테이블 -->
     <table>
       <thead>
         <tr>
           <th>순위</th>
           <th>시즌</th>
           <th>주차</th>
-          <th>그룹</th>
+          <th>결사</th>
           <th>닉네임</th>
-          <th>총합</th>
-          <th>주간</th>
+          <th>총누적</th>
+          <th>주차공헌</th>
         </tr>
       </thead>
       <tbody id="rubyTable"></tbody>
