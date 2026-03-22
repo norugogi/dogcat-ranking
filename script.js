@@ -49,10 +49,26 @@ document.getElementById("playerList").innerHTML = html;
 
 }
 
+function showMainPage(){
+  document.getElementById("mainPage").style.display = "block";
+  document.getElementById("rubyPage").style.display = "none";
+}
+
 function showAll(){
+  showMainPage();
+  render(players);
+}
 
-render(players);
+function showDOG(){
+  showMainPage();
+  let list = players.filter(p => p.guild_name === "DOG");
+  render(list);
+}
 
+function showCAT(){
+  showMainPage();
+  let list = players.filter(p => p.guild_name === "CATT");
+  render(list);
 }
 
 function showDOG(){
