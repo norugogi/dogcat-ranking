@@ -97,10 +97,10 @@ tr:hover{
     <div class="sidebar">
 
         <div class="menu-title">DOG & CAT 결사원</div>
-        <div class="menu-item active" onclick="showAll()">전체보기</div>
-        <div class="menu-item" onclick="showDOG()">DOG 결사원</div>
-        <div class="menu-item" onclick="showCAT()">CAT 결사원</div>
-        <div class="menu-title">카드 프로필(클릭X)</div>
+        <div class="menu-item active" onclick="showAll(); menuClick(this)">전체보기</div>
+        <div class="menu-item" onclick="showDOG(); menuClick(this)">DOG 결사원</div>
+        <div class="menu-item" onclick="showCAT(); menuClick(this)">CAT 결사원</div>
+        <div class="menu-title">카드 프로필(테스트중X)</div>
         <div class="menu-item" onclick="goCards()">카드 프로필 보기</div>
 
         <div class="menu-title">결사 통계</div>
@@ -108,7 +108,7 @@ tr:hover{
 
         <!-- 🔥 추가된 루비 메뉴 -->
         <div class="menu-title">루비 공헌</div>
-        <div class="menu-item" onclick="showRuby()">루비 공헌 순위</div>
+        <div class="menu-item" onclick="showRuby(); menuClick(this)">루비 공헌 순위</div>
 
     </div>
 
