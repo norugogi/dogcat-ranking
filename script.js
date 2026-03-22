@@ -20,7 +20,8 @@ fetch("all_servers_ranking.json")
 .then(res => res.json())
 .then(data => {
   players = data;
-  render(players); // 초기 렌더
+
+  showAll(); // 🔥 이걸로 통일
 });
 
 
