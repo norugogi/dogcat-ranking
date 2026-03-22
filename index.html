@@ -1,123 +1,194 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
 <title>DOG & CAT</title>
 
 <style>
-body { font-family: Arial; }
-
-.menu-item {
-  cursor: pointer;
-  padding: 8px;
-}
-.menu-item.active {
-  background: #444;
+body {
+  margin: 0;
+  font-family: Pretendard, sans-serif;
+  background: #1e1f22;
   color: #fff;
 }
 
-#rubyPage { display:none; }
+/* 좌측 메뉴 */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #111214;
+  padding: 20px;
+  position: fixed;
+}
+
+.menu-title {
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.menu-item {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: #2a2b30;
+}
+
+.menu-item.active {
+  background: #d4af37;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 메인 영역 */
+.main {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* 테이블 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #2a2b30;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+tbody tr:hover {
+  background: #2a2b30;
+}
+
+/* 페이지 */
+#rubyPage { display: none; }
 </style>
 </head>
 
 <body>
 
-<!-- 메뉴 -->
-<div class="menu-title">DOG & CAT 결사원</div>
+<!-- 좌측 메뉴 -->
+<div class="sidebar">
 
-<div class="menu-item active" onclick="showAll(); menuClick(this)">전체보기</div>
-<div class="menu-item" onclick="showDOG(); menuClick(this)">DOG 결사원</div>
-<div class="menu-item" onclick="showCAT(); menuClick(this)">CAT 결사원</div>
+  <div class="menu-title">DOG & CAT 결사원</div>
+  <div class="menu-item active" onclick="showAll(); menuClick(this)">전체보기</div>
+  <div class="menu-item" onclick="showDOG(); menuClick(this)">DOG 결사원</div>
+  <div class="menu-item" onclick="showCAT(); menuClick(this)">CAT 결사원</div>
 
-<div class="menu-title">카드 프로필(테스트)</div>
-<div class="menu-item" onclick="goCards()">카드 프로필 보기</div>
+  <div class="menu-title">카드 프로필</div>
+  <div class="menu-item" onclick="goCards()">카드 프로필 보기</div>
 
-<div class="menu-title">결사 통계</div>
-<div class="menu-item" onclick="openStats()">통계 보기</div>
+  <div class="menu-title">결사 통계</div>
+  <div class="menu-item" onclick="openStats()">통계 보기</div>
 
-<div class="menu-title">루비 공헌</div>
-<div class="menu-item" onclick="showRuby(); menuClick(this)">루비 공헌 순위</div>
+  <div class="menu-title">루비 공헌</div>
+  <div class="menu-item" onclick="showRuby(); menuClick(this)">루비 공헌 순위</div>
 
-
-<hr>
-
-<!-- 메인 페이지 -->
-<div id="mainPage">
-  <table border="1">
-    <thead>
-      <tr>
-        <th>결사</th>
-        <th>닉네임</th>
-        <th>레벨</th>
-        <th>직업</th>
-        <th>등급</th>
-      </tr>
-    </thead>
-    <tbody id="playerList"></tbody>
-  </table>
 </div>
 
-<!-- 루비 페이지 -->
-<div id="rubyPage">
-  <h3>루비 공헌</h3>
+<!-- 메인 -->
+<div class="main">
 
-  <div>
-    그룹:
-    <select id="groupFilter">
-      <option value="all">전체</option>
-      <option value="DOG">DOG</option>
-      <option value="CAT">CAT</option>
-    </select>
+  <!-- 메인 페이지 -->
+  <div id="mainPage">
 
-    시즌:
-    <select id="seasonFilter"></select>
+    <div class="title">DOG & CAT 결사원 리스트</div>
+    <div class="sub">
+      갱신 날짜: -<br>
+      서버: 아르테5
+    </div>
 
-    주차:
-    <select id="weekFilter"></select>
+    <table>
+      <thead>
+        <tr>
+          <th>결사</th>
+          <th>캐릭터</th>
+          <th>레벨</th>
+          <th>직업</th>
+          <th>토벌</th>
+        </tr>
+      </thead>
+      <tbody id="playerList"></tbody>
+    </table>
+
   </div>
 
-  <br>
+  <!-- 루비 페이지 -->
+  <div id="rubyPage">
 
-  <div style="width:300px; background:#ccc;">
-    <div id="rubyBar" style="height:20px; background:red; width:0%"></div>
+    <div class="title">루비 공헌 순위</div>
+
+    <div style="margin-bottom:20px;">
+      그룹:
+      <select id="groupFilter"></select>
+
+      시즌:
+      <select id="seasonFilter"></select>
+
+      주차:
+      <select id="weekFilter"></select>
+    </div>
+
+    <div style="width:300px; background:#333;">
+      <div id="rubyBar" style="height:20px; background:#d4af37; width:0%"></div>
+    </div>
+
+    <div id="rubyText"></div>
+    <div id="rubyPercent"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>시즌</th>
+          <th>주차</th>
+          <th>그룹</th>
+          <th>닉네임</th>
+          <th>총합</th>
+          <th>주간</th>
+        </tr>
+      </thead>
+      <tbody id="rubyTable"></tbody>
+    </table>
+
   </div>
-  <div id="rubyText"></div>
-  <div id="rubyPercent"></div>
 
-  <table border="1">
-    <thead>
-      <tr>
-        <th>순위</th>
-        <th>시즌</th>
-        <th>주차</th>
-        <th>그룹</th>
-        <th>닉네임</th>
-        <th>총합</th>
-        <th>주간</th>
-      </tr>
-    </thead>
-    <tbody id="rubyTable"></tbody>
-  </table>
 </div>
-
 
 <script>
-/***************************************
- * 🔥 menuClick (안전 버전)
- ***************************************/
 function menuClick(el){
-  if(!el) return;
-
   document.querySelectorAll(".menu-item").forEach(e=>{
     e.classList.remove("active");
   });
-
   el.classList.add("active");
 }
 </script>
 
-<!-- 기존 JS 그대로 사용 -->
 <script src="script.js"></script>
 <script src="ruby.js"></script>
 
