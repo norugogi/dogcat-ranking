@@ -81,4 +81,16 @@ window.open(
 
 }
 
+<script>
+function showRuby(){
+    document.querySelector("table").style.display = "none";
+    document.querySelector("h1").innerText = "루비 공헌 순위";
+    document.getElementById("rubyPage").style.display = "block";
+}
 
+/* 기존 페이지 복귀 */
+function showAll(){
+    document.getElementById("rubyPage").style.display = "none";
+    document.querySelector("table").style.display = "table";
+}
+</script>
