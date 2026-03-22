@@ -31,30 +31,26 @@ window.onload = function(){
  ***************************************/
 function render(list){
 
+  const tbody = document.getElementById("playerList");
+
+  tbody.innerHTML = ""; // 🔥 핵심
+
   let html = "";
 
   list.forEach(p => {
-
-    let guild = p.guild_name || "";
-    let name = p.gc_name || "";
-    let level = p.gc_level || "";
-    let grade = p.grade || "";
-    let job = classMap[p.class] || p.class;
-
     html += `
     <tr>
-      <td>${guild}</td>
-      <td>${name}</td>
-      <td>${level}</td>
-      <td>${job}</td>
-      <td>${grade}</td>
+      <td>${p.guild_name || ""}</td>
+      <td>${p.gc_name || ""}</td>
+      <td>${p.gc_level || ""}</td>
+      <td>${classMap[p.class] || p.class}</td>
+      <td>${p.grade || ""}</td>
     </tr>
     `;
   });
 
-  document.getElementById("playerList").innerHTML = html;
+  tbody.innerHTML = html;
 }
-
 
 /***************************************
  * 🔥 메뉴
