@@ -17,7 +17,7 @@ fetch("all_servers_ranking.json")
 .then(res => res.json())
 .then(data => {
   players = data;
-  showAll();
+  render(players); // showAll 말고 이게 더 안전
 });
 
 /***************************************
