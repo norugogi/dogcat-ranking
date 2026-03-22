@@ -68,9 +68,8 @@ function showAll(){
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
-  if(players.length){
-    render(players);
-  }
+  render([]); // 🔥 빈 화면 한번
+  render(players); // 다시 채움
 }
 
 function showDOG(){
