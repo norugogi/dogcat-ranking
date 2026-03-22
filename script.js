@@ -128,7 +128,7 @@ function renderRuby(){
       };
     }
 
-    map[key].total += r.value;
+    map[key].total += Number(r.value || 0);
   });
 
   let list = Object.values(map);
