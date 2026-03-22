@@ -2,238 +2,123 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>DOG & CAT 결사원 리스트</title>
-
-<link rel="stylesheet" href="style.css">
+<title>DOG & CAT</title>
 
 <style>
-body{
-    margin:0;
-    background:#212121;
-    color:white;
-    font-family:Arial;
+body { font-family: Arial; }
+
+.menu-item {
+  cursor: pointer;
+  padding: 8px;
+}
+.menu-item.active {
+  background: #444;
+  color: #fff;
 }
 
-/* 전체 레이아웃 */
-.layout{
-    display:flex;
-}
-
-/* 사이드바 */
-.sidebar{
-    width:220px;
-    height:100vh;
-    background:#1a1a1a;
-    padding:20px;
-    border-right:1px solid #333;
-}
-
-.menu-title{
-    font-size:13px;
-    color:#888;
-    margin-top:20px;
-    margin-bottom:10px;
-}
-
-.menu-item{
-    padding:10px;
-    border-radius:6px;
-    cursor:pointer;
-    margin-bottom:5px;
-}
-
-.menu-item:hover{
-    background:#2c2c2c;
-}
-
-.menu-item.active{
-    background:#d4af37;
-    color:#000;
-}
-
-/* 메인 콘텐츠 */
-.content{
-    flex:1;
-    padding:20px;
-    text-align:center;
-}
-
-h1{
-    margin-top:10px;
-}
-
-.info{
-    margin-bottom:20px;
-    color:#aaa;
-}
-
-/* 테이블 */
-table{
-    width:90%;
-    margin:auto;
-    border-collapse:collapse;
-}
-
-th,td{
-    padding:10px;
-    border-bottom:1px solid #444;
-}
-
-th{
-    background:#333;
-}
-
-tr:hover{
-    background:#2a2a2a;
-}
+#rubyPage { display:none; }
 </style>
 </head>
 
 <body>
 
-<div class="layout">
+<!-- 메뉴 -->
+<div class="menu-title">DOG & CAT 결사원</div>
 
-    <!-- 🔥 좌측 메뉴 -->
-    <div class="sidebar">
+<div class="menu-item active" onclick="showAll(); menuClick(this)">전체보기</div>
+<div class="menu-item" onclick="showDOG(); menuClick(this)">DOG 결사원</div>
+<div class="menu-item" onclick="showCAT(); menuClick(this)">CAT 결사원</div>
 
-        <div class="menu-title">DOG & CAT 결사원</div>
-        <div class="menu-item active" onclick="showAll(); menuClick(this)">전체보기</div>
-        <div class="menu-item" onclick="showDOG(); menuClick(this)">DOG 결사원</div>
-        <div class="menu-item" onclick="showCAT(); menuClick(this)">CAT 결사원</div>
-        <div class="menu-title">카드 프로필(테스트중X)</div>
-        <div class="menu-item" onclick="goCards()">카드 프로필 보기</div>
+<div class="menu-title">카드 프로필</div>
+<div class="menu-item" onclick="goCards()">카드 프로필 보기</div>
 
-        <div class="menu-title">결사 통계</div>
-        <div class="menu-item" onclick="openStats()">통계 보기</div>
+<div class="menu-title">결사 통계</div>
+<div class="menu-item" onclick="openStats()">통계 보기</div>
 
-        <!-- 🔥 추가된 루비 메뉴 -->
-        <div class="menu-title">루비 공헌</div>
-        <div class="menu-item" onclick="showRuby(); menuClick(this)">루비 공헌 순위</div>
+<div class="menu-title">루비 공헌</div>
+<div class="menu-item" onclick="showRuby(); menuClick(this)">루비 공헌 순위</div>
 
-    </div>
 
-    <!-- 🔥 메인 영역 -->
-    <div class="content">
+<hr>
 
-        <!-- 🔴 기존 페이지 -->
-        <div id="mainPage">
-
-            <h1 id="mainTitle">DOG & CAT 결사원 리스트</h1>
-
-            <div class="info">
-            갱신 날짜: <span id="updateTime"></span><br>
-            서버: 아민타5
-            </div>
-
-            <table id="mainTable">
-            <thead>
-            <tr>
-            <th>결사</th>
-            <th>캐릭터</th>
-            <th>레벨</th>
-            <th>직업</th>
-            <th>토벌</th>
-            </tr>
-            </thead>
-
-            <tbody id="playerList"></tbody>
-            </table>
-
-        </div>
-
-        <!-- 🔥 루비 공헌 페이지 -->
-        <div id="rubyPage" style="display:none;">
-
-            <h1>루비 공헌 순위</h1>
-
-            <!-- 상단 -->
-            <div style="width:90%; margin:auto; margin-bottom:20px;">
-
-                <select id="seasonSelect">
-                    <option value="all">전체 시즌</option>
-                </select>
-
-                <div style="margin-top:10px; background:#333; height:30px; border-radius:10px; overflow:hidden;">
-                    <div id="rubyBar" style="height:100%; width:0%; background:#ff4d4d;"></div>
-                </div>
-
-                <div style="margin-top:5px;">
-                    <span id="rubyText">0 / 50000000</span>
-                    <span id="rubyPercent" style="float:right;">0%</span>
-                </div>
-
-            </div>
-
-            <!-- 필터 -->
-            <div style="margin-bottom:20px;">
-                <select id="groupFilter">
-                    <option value="all">전체</option>
-                    <option value="DOG">DOG</option>
-                    <option value="CAT">CAT</option>
-                </select>
-
-                <select id="seasonFilter">
-                    <option value="all">전체 시즌</option>
-                </select>
-
-                <select id="weekFilter">
-                    <option value="all">전체 주차</option>
-                </select>
-            </div>
-
-            <!-- 테이블 -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>순위</th>
-                        <th>시즌</th>
-                        <th>주차</th>
-                        <th>결사</th>
-                        <th>닉네임</th>
-                        <th>총누적</th>
-                        <th>주차공헌</th>
-                    </tr>
-                </thead>
-                <tbody id="rubyTable"></tbody>
-            </table>
-
-        </div>
-
-    </div>
-
+<!-- 메인 페이지 -->
+<div id="mainPage">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>결사</th>
+        <th>닉네임</th>
+        <th>레벨</th>
+        <th>직업</th>
+        <th>등급</th>
+      </tr>
+    </thead>
+    <tbody id="playerList"></tbody>
+  </table>
 </div>
 
-<script src="script.js"></script>
+<!-- 루비 페이지 -->
+<div id="rubyPage">
+  <h3>루비 공헌</h3>
+
+  <div>
+    그룹:
+    <select id="groupFilter">
+      <option value="all">전체</option>
+      <option value="DOG">DOG</option>
+      <option value="CAT">CAT</option>
+    </select>
+
+    시즌:
+    <select id="seasonFilter"></select>
+
+    주차:
+    <select id="weekFilter"></select>
+  </div>
+
+  <br>
+
+  <div style="width:300px; background:#ccc;">
+    <div id="rubyBar" style="height:20px; background:red; width:0%"></div>
+  </div>
+  <div id="rubyText"></div>
+  <div id="rubyPercent"></div>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>순위</th>
+        <th>시즌</th>
+        <th>주차</th>
+        <th>그룹</th>
+        <th>닉네임</th>
+        <th>총합</th>
+        <th>주간</th>
+      </tr>
+    </thead>
+    <tbody id="rubyTable"></tbody>
+  </table>
+</div>
+
 
 <script>
-/* 메뉴 active 처리 */
+/***************************************
+ * 🔥 menuClick (안전 버전)
+ ***************************************/
 function menuClick(el){
-    document.querySelectorAll('.menu-item').forEach(btn=>{
-        btn.classList.remove('active');
-    });
-    el.classList.add('active');
-}
+  if(!el) return;
 
-/* 카드 페이지 이동 */
-function goCards(){
-    window.location.href = "cards.html";
-}
+  document.querySelectorAll(".menu-item").forEach(e=>{
+    e.classList.remove("active");
+  });
 
-/* 🔥 루비 페이지 전환 */
-function showRuby(){
-    document.getElementById("mainPage").style.display = "none";
-    document.getElementById("rubyPage").style.display = "block";
-}
-
-/* 🔴 기존 페이지 복귀 */
-function showAll(){
-    document.getElementById("rubyPage").style.display = "none";
-    document.getElementById("mainPage").style.display = "block";
+  el.classList.add("active");
 }
 </script>
 
-</body>
-</html>
-
+<!-- 기존 JS 그대로 사용 -->
 <script src="script.js"></script>
 <script src="ruby.js"></script>
+
+</body>
+</html>
