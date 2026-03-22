@@ -81,16 +81,14 @@ window.open(
 
 }
 
-function showMain(){
-    render(players);
+function showAll(){
+    document.getElementById("rubyPage").style.display = "none";
+    document.getElementById("mainPage").style.display = "block";
+
+    render(players); // ← 이거 반드시 포함
 }
 
 function showRuby(){
     document.getElementById("mainPage").style.display = "none";
     document.getElementById("rubyPage").style.display = "block";
-}
-
-function showAll(){
-    document.getElementById("rubyPage").style.display = "none";
-    document.getElementById("mainPage").style.display = "block";
 }
