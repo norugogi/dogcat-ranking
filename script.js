@@ -68,8 +68,14 @@ function showAll(){
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
-  render([]); // 🔥 빈 화면 한번
-  render(players); // 다시 채움
+  // 🔥 기존 상태 완전히 초기화
+  const tbody = document.getElementById("playerList");
+  tbody.innerHTML = "";
+
+  // 🔥 강제 전체 렌더
+  setTimeout(() => {
+    render(players);
+  }, 0);
 }
 
 function showDOG(){
