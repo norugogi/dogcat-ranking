@@ -28,6 +28,8 @@ fetch("https://raw.githubusercontent.com/norugogi/dogcat-ranking/main/ruby_ranki
 .then(data => {
   rubyData = data.data;
   console.log("루비 데이터 로드 완료", rubyData);
+
+  renderRuby(); // 🔥 이거 추가
 });
 
 
@@ -95,7 +97,9 @@ function showRuby(){
   document.getElementById("mainPage").style.display = "none";
   document.getElementById("rubyPage").style.display = "block";
 
-  renderRuby();
+  if(rubyData.length){
+    renderRuby();
+  }
 }
 
 
