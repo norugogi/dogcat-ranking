@@ -63,7 +63,6 @@ function render(list){
  ***************************************/
 function menuClick(el){
 
-  // active 처리
   document.querySelectorAll('.menu-item').forEach(btn=>{
     btn.classList.remove('active');
   });
@@ -71,6 +70,9 @@ function menuClick(el){
   el.classList.add('active');
 
   const type = el.dataset.type;
+
+  // 🔥 type 없는 메뉴는 그냥 통과 (중요)
+  if(!type) return;
 
   if(type === "all"){
     showAll();
