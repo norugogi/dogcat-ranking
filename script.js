@@ -1,6 +1,3 @@
-/***************************************
- * 🔥 전역 데이터
- ***************************************/
 let players = [];
 
 const classMap = {
@@ -12,21 +9,25 @@ const classMap = {
   IncenseArcher:"향사수"
 };
 
-
 /***************************************
- * 🔥 결사원 데이터 fetch
+ * 🔥 초기 로딩 (핵심)
  ***************************************/
-fetch("all_servers_ranking.json")
-.then(res => res.json())
-.then(data => {
-  players = data;
+window.onload = function(){
 
-  showAll(); // 🔥 이걸로 통일
-});
+  fetch("all_servers_ranking.json")
+  .then(res => res.json())
+  .then(data => {
+    players = data;
+
+    // 🔥 무조건 여기서 한번 렌더
+    render(players);
+  });
+
+};
 
 
 /***************************************
- * 🔥 렌더 함수
+ * 🔥 렌더
  ***************************************/
 function render(list){
 
@@ -56,17 +57,20 @@ function render(list){
 
 
 /***************************************
- * 🔥 메뉴 (결사원 관련)
+ * 🔥 메뉴
  ***************************************/
 function showAll(){
 
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
-  render(players);
+  if(players.length){
+    render(players);
+  }
 }
 
 function showDOG(){
+
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
@@ -75,6 +79,7 @@ function showDOG(){
 }
 
 function showCAT(){
+
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
@@ -84,7 +89,7 @@ function showCAT(){
 
 
 /***************************************
- * 🔥 통계 팝업
+ * 🔥 통계
  ***************************************/
 function openStats(){
   window.open(
