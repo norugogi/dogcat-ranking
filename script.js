@@ -10,7 +10,7 @@ const classMap = {
 };
 
 /***************************************
- * 🔥 초기 로딩 (핵심)
+ * 🔥 초기 로딩
  ***************************************/
 window.onload = function(){
 
@@ -18,9 +18,7 @@ window.onload = function(){
   .then(res => res.json())
   .then(data => {
     players = data;
-
-    // 🔥 무조건 여기서 한번 렌더
-    render(players);
+    render(players); // 최초 렌더
   });
 
 };
@@ -33,8 +31,7 @@ function render(list){
 
   const tbody = document.getElementById("playerList");
 
-  // 🔥 무조건 비우기 (핵심)
-  tbody.innerHTML = "";
+  tbody.innerHTML = ""; // 항상 초기화
 
   let html = "";
 
@@ -60,22 +57,42 @@ function render(list){
   tbody.innerHTML = html;
 }
 
+
 /***************************************
- * 🔥 메뉴
+ * 🔥 메뉴 (핵심 수정됨)
+ ***************************************/
+function menuClick(el){
+
+  // active 처리
+  document.querySelectorAll('.menu-item').forEach(btn=>{
+    btn.classList.remove('active');
+  });
+
+  el.classList.add('active');
+
+  const type = el.dataset.type;
+
+  if(type === "all"){
+    showAll();
+  }
+  else if(type === "dog"){
+    showDOG();
+  }
+  else if(type === "cat"){
+    showCAT();
+  }
+}
+
+
+/***************************************
+ * 🔥 화면 전환 + 데이터 처리
  ***************************************/
 function showAll(){
 
   document.getElementById("rubyPage").style.display = "none";
   document.getElementById("mainPage").style.display = "block";
 
-  // 🔥 기존 상태 완전히 초기화
-  const tbody = document.getElementById("playerList");
-  tbody.innerHTML = "";
-
-  // 🔥 강제 전체 렌더
-  setTimeout(() => {
-    render(players);
-  }, 0);
+  render(players);
 }
 
 function showDOG(){
