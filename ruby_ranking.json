@@ -1,89 +1,73 @@
 {
-  "updated": "2026-03-22T08:34:56.236Z",
+  "updated": "2026-03-24T02:53:31.119Z",
   "data": [
     {
-      "uid": "U006",
-      "name": "사슴",
+      "uid": "미등록",
+      "name": "노루얌",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 1000000
     },
     {
-      "uid": "U006",
-      "name": "설악산노루",
+      "uid": "미등록",
+      "name": "왜불렁",
       "group": "DOG",
       "season": "28시즌",
       "week": 2,
       "value": 2500000
     },
     {
-      "uid": "U013",
-      "name": "로빈훗",
+      "uid": "미등록",
+      "name": "뭐하니",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 2500000
     },
     {
-      "uid": "U013",
-      "name": "로빈후드",
+      "uid": "미등록",
+      "name": "끄적끄적",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 1000000
     },
     {
-      "uid": "U046",
-      "name": "김쓰",
+      "uid": "미등록",
+      "name": "이것저것",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 2500000
     },
     {
-      "uid": "U005",
-      "name": "아톰",
+      "uid": "미등록",
+      "name": "건드는중",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 500000
     },
     {
-      "uid": "U075",
-      "name": "마운틴",
+      "uid": "미등록",
+      "name": "이거슨",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 2500000
     },
     {
-      "uid": "U036",
-      "name": "학연",
+      "uid": "미등록",
+      "name": "바로",
       "group": "DOG",
       "season": "28시즌",
       "week": 1,
       "value": 2500000
     },
     {
-      "uid": "U056",
-      "name": "어피치",
-      "group": "CAT",
-      "season": "28시즌",
-      "week": 1,
-      "value": 500000
-    },
-    {
-      "uid": "U094",
-      "name": "아스타로드",
-      "group": "CAT",
-      "season": "28시즌",
-      "week": 1,
-      "value": 2500000
-    },
-    {
-      "uid": "U092",
-      "name": "고녜이",
+      "uid": "미등록",
+      "name": "루비공헌",
       "group": "CAT",
       "season": "28시즌",
       "week": 1,
@@ -91,15 +75,31 @@
     },
     {
       "uid": "미등록",
-      "name": "준태",
+      "name": "유도용",
       "group": "CAT",
       "season": "28시즌",
       "week": 1,
       "value": 2500000
     },
     {
-      "uid": "U052",
-      "name": "윙티",
+      "uid": "미등록",
+      "name": "순위",
+      "group": "CAT",
+      "season": "28시즌",
+      "week": 1,
+      "value": 500000
+    },
+    {
+      "uid": "U006",
+      "name": "사슴",
+      "group": "CAT",
+      "season": "28시즌",
+      "week": 1,
+      "value": 2500000
+    },
+    {
+      "uid": "미등록",
+      "name": "사슴고기",
       "group": "CAT",
       "season": "28시즌",
       "week": 1,
